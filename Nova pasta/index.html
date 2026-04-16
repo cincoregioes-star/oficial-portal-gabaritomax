@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulado - Analista Administrativo | Câmara de Beberibe</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(90deg, #121c4e, #7a1fa0);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+        .header p {
+            font-size: 17px;
+            opacity: 0.95;
+        }
+
+        .conteudo {
+            padding: 40px 30px;
+        }
+        .questao {
+            margin-bottom: 35px;
+            padding: 25px;
+            background: #f9f9f9;
+            border-radius: 12px;
+            border-left: 6px solid #00bef1;
+        }
+        .enunciado {
+            font-weight: 600;
+            font-size: 17.5px;
+            margin-bottom: 18px;
+            color: #121c4e;
+        }
+        .alternativa {
+            display: block;
+            margin: 14px 0;
+            padding: 14px 18px;
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 16px;
+        }
+        .alternativa:hover {
+            border-color: #00bef1;
+            background: #f0f8ff;
+        }
+        .alternativa.selecionada {
+            border-color: #00c853;
+            background: #e8f5e9;
+            font-weight: 600;
+        }
+
+        .btn-baixar {
+            display: block;
+            width: 280px;
+            margin: 40px auto 20px;
+            padding: 16px 30px;
+            background: #00c853;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 6px 20px rgba(0,200,83,0.3);
+            transition: 0.3s;
+        }
+        .btn-baixar:hover {
+            transform: scale(1.05);
+            background: #00b140;
+        }
+
+        .btn-gabarito {
+            display: block;
+            width: 280px;
+            margin: 20px auto;
+            padding: 15px 30px;
+            background: #ffc107;
+            color: #121c4e;
+            font-size: 17px;
+            font-weight: bold;
+            text-align: center;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+
+        .gabarito {
+            margin-top: 50px;
+            padding: 30px;
+            background: #121c4e;
+            color: white;
+            border-radius: 12px;
+            display: none;
+        }
+        .gabarito h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #ffc107;
+        }
+        .resposta {
+            margin: 18px 0;
+            padding: 12px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>Simulado - Analista Administrativo</h1>
+        <p>Câmara Municipal de Beberibe • 10 Questões</p>
+    </div>
+
+    <div class="conteudo">
+
+        <!-- Questão 1 -->
+        <div class="questao">
+            <div class="enunciado">1. Qual dos princípios abaixo está expressamente previsto no caput do art. 37 da Constituição Federal?</div>
+            <label class="alternativa" onclick="selecionar(this)">A) Apenas legalidade</label>
+            <label class="alternativa" onclick="selecionar(this)">B) Legalidade, impessoalidade, moralidade, publicidade e eficiência</label>
+            <label class="alternativa" onclick="selecionar(this)">C) Somente eficiência</label>
+            <label class="alternativa" onclick="selecionar(this)">D) Supremacia do interesse público</label>
+        </div>
+
+        <!-- Questão 2 -->
+        <div class="questao">
+            <div class="enunciado">2. A responsabilidade civil do Estado por danos causados a terceiros é, em regra:</div>
+            <label class="alternativa" onclick="selecionar(this)">A) Subjetiva, dependendo de culpa</label>
+            <label class="alternativa" onclick="selecionar(this)">B) Objetiva, independentemente de culpa</label>
+            <label class="alternativa" onclick="selecionar(this)">C) Apenas em caso de dolo ou culpa grave</label>
+            <label class="alternativa" onclick="selecionar(this)">D) Limitada aos atos de improbidade</label>
+        </div>
+
+        <!-- Questão 3 -->
+        <div class="questao">
+            <div class="enunciado">3. A vedação ao nepotismo na Administração Pública foi consolidada pela:</div>
+            <label class="alternativa" onclick="selecionar(this)">A) Lei nº 8.429/1992</label>
+            <label class="alternativa" onclick="selecionar(this)">B) Súmula Vinculante nº 13 do STF</label>
+            <label class="alternativa" onclick="selecionar(this)">C) Lei nº 14.133/2021</label>
+            <label class="alternativa" onclick="selecionar(this)">D) Lei Orgânica do Município</label>
+        </div>
+
+        <!-- Questão 4 -->
+        <div class="questao">
+            <div class="enunciado">4. O princípio da eficiência na Administração Pública significa:</div>
+            <label class="alternativa" onclick="selecionar(this)">A) Cumprir a lei independentemente do resultado</label>
+            <label class="alternativa" onclick="selecionar(this)">B) Obter o melhor resultado com o menor custo possível</label>
+            <label class="alternativa" onclick="selecionar(this)">C) Atender apenas aos interesses do gestor</label>
+            <label class="alternativa" onclick="selecionar(this)">D) Publicar todos os atos no Diário Oficial</label>
+        </div>
+
+        <!-- Questão 5 -->
+        <div class="questao">
+            <div class="enunciado">5. Qual lei regula atualmente as licitações e contratos administrativos?</div>
+            <label class="alternativa" onclick="selecionar(this)">A) Lei nº 8.666/1993 apenas</label>
+            <label class="alternativa" onclick="selecionar(this)">B) Lei nº 14.133/2021 (Nova Lei de Licitações)</label>
+            <label class="alternativa" onclick="selecionar(this)">C) Ambas, dependendo da data da contratação</label>
+            <label class="alternativa" onclick="selecionar(this)">D) Lei nº 13.303/2016</label>
+        </div>
+
+        <!-- Questão 6 -->
+        <div class="questao">
+            <div class="enunciado">6. O ato administrativo que extingue um direito do administrado é chamado de:</div>
+            <label class="alternativa" onclick="selecionar(this)">A) Ato constitutivo</label>
+            <label class="alternativa" onclick="selecionar(this)">B) Ato declaratório</label>
+            <label class="alternativa" onclick="selecionar(this)">C) Ato extintivo</label>
+            <label class="alternativa" onclick="selecionar(this)">D) Ato modificativo</label>
+        </div>
+
+        <!-- Questão 7 -->
+        <div class="questao">
+            <div class="enunciado">7. A improbidade administrativa está disciplinada na:</div>
+            <label class="alternativa" onclick="selecionar(this)">A) Lei nº 8.429/1992</label>
+            <label class="alternativa" onclick="selecionar(this)">B) Lei nº 8.666/1993</label>
+            <label class="alternativa" onclick="selecionar(this)">C) Lei de Acesso à Informação</label>
+            <label class="alternativa" onclick="selecionar(this)">D) Lei nº 14.133/2021</label>
+        </div>
+
+        <!-- Questão 8 -->
+        <div class="questao">
+            <div class="enunciado">8. O servidor público que revela informação sigilosa obtida em razão do cargo comete:</div>
+            <label class="alternativa" onclick="selecionar(this)">A) Desídia</label>
+            <label class="alternativa" onclick="selecionar(this)">B) Violação de sigilo funcional</label>
+            <label class="alternativa" onclick="selecionar(this)">C) Nepotismo</label>
+            <label class="alternativa" onclick="selecionar(this)">D) Abandono de cargo</label>
+        </div>
+
+        <!-- Questão 9 -->
+        <div class="questao">
+            <div class="enunciado">9. No processo administrativo, o direito de o interessado ser ouvido antes da decisão é garantido pelo princípio do:</div>
+            <label class="alternativa" onclick="selecionar(this)">A) Publicidade</label>
+            <label class="alternativa" onclick="selecionar(this)">B) Contraditório e ampla defesa</label>
+            <label class="alternativa" onclick="selecionar(this)">C) Motivação</label>
+            <label class="alternativa" onclick="selecionar(this)">D) Informalismo</label>
+        </div>
+
+        <!-- Questão 10 -->
+        <div class="questao">
+            <div class="enunciado">10. A acumulação de cargos públicos é permitida quando:</div>
+            <label class="alternativa" onclick="selecionar(this)">A) Os dois cargos forem de nível superior</label>
+            <label class="alternativa" onclick="selecionar(this)">B) Os horários forem compatíveis e houver previsão legal</label>
+            <label class="alternativa" onclick="selecionar(this)">C) Um dos cargos for de livre nomeação</label>
+            <label class="alternativa" onclick="selecionar(this)">D) Não houver limite de jornada</label>
+        </div>
+
+        <a href="#" class="btn-baixar" onclick="alert('📘 PDF com as 10 questões + gabarito em breve!')">📘 Baixar PDF</a>
+
+        <button onclick="mostrarGabarito()" class="btn-gabarito">
+            Ver Gabarito Comentado
+        </button>
+
+        <div id="gabarito" class="gabarito">
+            <h2>Gabarito Oficial</h2>
+            <div class="resposta">1. B</div>
+            <div class="resposta">2. B</div>
+            <div class="resposta">3. B</div>
+            <div class="resposta">4. B</div>
+            <div class="resposta">5. C</div>
+            <div class="resposta">6. C</div>
+            <div class="resposta">7. A</div>
+            <div class="resposta">8. B</div>
+            <div class="resposta">9. B</div>
+            <div class="resposta">10. B</div>
+            <p style="text-align:center; margin-top:25px; font-size:15px; opacity:0.9;">
+                Quer o gabarito com explicação detalhada de cada questão?<br>
+                Entre em contato pelo WhatsApp!
+            </p>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    function selecionar(elemento) {
+        const alternativas = elemento.parentElement.querySelectorAll('.alternativa');
+        alternativas.forEach(alt => alt.classList.remove('selecionada'));
+        elemento.classList.add('selecionada');
+    }
+
+    function mostrarGabarito() {
+        document.getElementById('gabarito').style.display = 'block';
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+</script>
+
+</body>
+</html>

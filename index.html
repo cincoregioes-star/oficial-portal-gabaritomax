@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gabarito Max - Portal de Simulados</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1041/1041728.png" type="image/png">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+    }
+
+    :root{
+      --azul-escuro:#121c4e;
+      --azul:#0f3cc9;
+      --azul-claro:#00bef1;
+      --roxo:#7a1fa0;
+      --amarelo:#ffc107;
+      --verde:#00c853;
+      --vermelho:#d90429;
+      --fundo:#f4f6fb;
+      --card:#ffffff;
+      --texto:#262626;
+      --muted:#5f6b7a;
+      --shadow:0 10px 26px rgba(0,0,0,.12);
+      --shadow-hover:0 16px 34px rgba(0,0,0,.16);
+      --radius:18px;
+    }
+
+    body{
+      background:var(--fundo);
+      color:var(--texto);
+      line-height:1.6;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    .ticker-wrapper{
+      background:#111;
+      margin-top:94px;
+    }
+
+    .ticker-label{
+      background:var(--vermelho);
+      color:#fff;
+      text-align:center;
+      padding:10px 16px;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:.5px;
+      font-size:14px;
+    }
+
+    .ticker-container{
+      height:42px;
+      overflow:hidden;
+      display:flex;
+      align-items:center;
+      border-bottom:1px solid #232323;
+    }
+
+    .ticker-content{
+      display:flex;
+      gap:50px;
+      white-space:nowrap;
+      color:#fff;
+      padding-left:20px;
+      animation:ticker 45s linear infinite;
+      font-size:15px;
+    }
+
+    @keyframes ticker{
+      0%{transform:translateX(0);}
+      100%{transform:translateX(-50%);}
+    }
+
+    header{
+      background:linear-gradient(90deg,var(--azul-claro) 0%,var(--roxo) 100%);
+      padding:16px 5%;
+      position:fixed;
+      top:0;
+      width:100%;
+      z-index:1000;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      color:white;
+      box-shadow:0 4px 20px rgba(0,0,0,.25);
+      flex-wrap:wrap;
+      gap:15px;
+    }
+
+    .logo-container{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .logo-icon{
+      font-size:34px;
+    }
+
+    .logo-text{
+      font-size:28px;
+      font-weight:700;
+      letter-spacing:-.8px;
+    }
+
+    .logo-text span{
+      color:var(--amarelo);
+    }
+
+    .nav-menu{
+      display:flex;
+      gap:22px;
+      font-size:15px;
+      font-weight:600;
+      flex-wrap:wrap;
+    }
+
+    .nav-menu a{
+      color:white;
+      text-decoration:none;
+      transition:.3s;
+    }
+
+    .nav-menu a:hover{
+      color:var(--amarelo);
+    }
+
+    .social-buttons{
+      display:flex;
+      gap:10px;
+    }
+
+    .social-btn{
+      width:42px;
+      height:42px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:white;
+      font-size:20px;
+      text-decoration:none;
+      transition:all .3s ease;
+      box-shadow:0 4px 12px rgba(0,0,0,.25);
+    }
+
+    .social-btn:hover{
+      transform:scale(1.12);
+    }
+
+    .btn-instagram{background:#E4405F;}
+    .btn-whatsapp{background:#25D366;}
+
+    .hero{
+      background:
+        linear-gradient(rgba(18,28,78,.84),rgba(18,28,78,.90)),
+        url('https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop') center/cover;
+      color:white;
+      padding:90px 5% 80px;
+      text-align:center;
+    }
+
+    .hero h1{
+      font-size:46px;
+      margin-bottom:18px;
+      line-height:1.2;
+    }
+
+    .hero p{
+      font-size:18px;
+      max-width:780px;
+      margin:0 auto 30px;
+      opacity:.97;
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:14px;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+
+    .hero-btn{
+      padding:15px 30px;
+      border-radius:50px;
+      text-decoration:none;
+      font-weight:700;
+      transition:.25s;
+      display:inline-block;
+    }
+
+    .hero-btn.primary{
+      background:var(--verde);
+      color:#fff;
+      box-shadow:0 10px 30px rgba(0,200,83,.35);
+    }
+
+    .hero-btn.secondary{
+      background:#fff;
+      color:var(--azul-escuro);
+    }
+
+    .hero-btn:hover{
+      transform:translateY(-3px);
+    }
+
+    .hero-stats{
+      max-width:1100px;
+      margin:35px auto 0;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+      gap:18px;
+    }
+
+    .stat-card{
+      background:rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.16);
+      backdrop-filter:blur(4px);
+      border-radius:16px;
+      padding:18px;
+    }
+
+    .stat-card strong{
+      display:block;
+      font-size:28px;
+      margin-bottom:6px;
+      color:#fff;
+    }
+
+    .stat-card span{
+      font-size:14px;
+      color:#f0f0f0;
+    }
+
+    .section{
+      padding:80px 5%;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:34px;
+      margin-bottom:16px;
+      color:var(--azul-escuro);
+    }
+
+    .section-subtitle{
+      text-align:center;
+      max-width:760px;
+      margin:0 auto 42px;
+      color:var(--muted);
+      font-size:17px;
+    }
+
+    .destaques-layout{
+      max-width:1350px;
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:minmax(0,1fr) 340px;
+      gap:26px;
+      align-items:start;
+    }
+
+    .news-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(290px,1fr));
+      gap:22px;
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      transition:.28s;
+    }
+
+    .card:hover{
+      transform:translateY(-7px);
+      box-shadow:var(--shadow-hover);
+    }
+
+    .card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+      display:block;
+    }
+
+    .card-content{
+      padding:20px;
+    }
+
+    .badge{
+      display:inline-block;
+      background:var(--vermelho);
+      color:#fff;
+      border-radius:999px;
+      padding:5px 12px;
+      font-size:12px;
+      font-weight:700;
+      margin-bottom:10px;
+      letter-spacing:.3px;
+      text-transform:uppercase;
+    }
+
+    .card h3{
+      font-size:20px;
+      line-height:1.35;
+      margin-bottom:8px;
+      color:var(--azul-escuro);
+    }
+
+    .card p{
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    .sidebar-box{
+      background:#fff;
+      border-radius:18px;
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    .sidebar-title{
+      background:linear-gradient(135deg,var(--azul),var(--roxo));
+      color:#fff;
+      padding:15px 18px;
+      font-size:17px;
+      font-weight:700;
+    }
+
+    .sidebar-list{
+      padding:18px;
+    }
+
+    .sidebar-item{
+      padding:14px 0;
+      border-bottom:1px solid #edf1f5;
+    }
+
+    .sidebar-item:last-child{
+      border-bottom:none;
+    }
+
+    .sidebar-item span{
+      display:inline-block;
+      font-size:12px;
+      font-weight:700;
+      color:var(--vermelho);
+      text-transform:uppercase;
+      margin-bottom:6px;
+    }
+
+    .sidebar-item a{
+      text-decoration:none;
+      color:var(--azul-escuro);
+      font-weight:700;
+      line-height:1.45;
+    }
+
+    .venda-section{
+      padding:60px 5%;
+      background:#fff;
+      text-align:center;
+    }
+
+    .venda-box{
+      max-width:1100px;
+      margin:0 auto;
+      background:linear-gradient(135deg,#0f3cc9,#7a1fa0);
+      color:white;
+      border-radius:22px;
+      padding:42px 24px;
+      box-shadow:0 20px 40px rgba(15,60,201,.18);
+    }
+
+    .venda-box h2{
+      font-size:34px;
+      margin-bottom:12px;
+    }
+
+    .venda-box p{
+      font-size:18px;
+      max-width:760px;
+      margin:0 auto 24px;
+      opacity:.96;
+    }
+
+    .venda-btn{
+      background:#00c853;
+      color:white;
+      padding:18px 60px;
+      border-radius:50px;
+      font-size:20px;
+      font-weight:bold;
+      text-decoration:none;
+      display:inline-block;
+      box-shadow:0 10px 30px rgba(0,200,83,.35);
+      transition:.25s;
+    }
+
+    .venda-btn:hover{
+      transform:scale(1.05);
+    }
+
+    .filter-container{
+      text-align:center;
+      margin-bottom:40px;
+    }
+
+    .filter-btn{
+      background:white;
+      border:2px solid var(--azul-claro);
+      color:var(--azul-escuro);
+      padding:12px 26px;
+      margin:6px;
+      border-radius:50px;
+      cursor:pointer;
+      font-weight:bold;
+      transition:.25s;
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover{
+      background:var(--azul-claro);
+      color:white;
+    }
+
+    .simulados-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:26px;
+      max-width:1350px;
+      margin:0 auto;
+    }
+
+    .simulado-card{
+      background:white;
+      border-radius:16px;
+      overflow:hidden;
+      box-shadow:0 8px 25px rgba(0,0,0,.1);
+      transition:.3s;
+    }
+
+    .simulado-card:hover{
+      transform:translateY(-10px);
+    }
+
+    .card-header{
+      height:8px;
+      background:var(--azul-claro);
+    }
+
+    .card-body{
+      padding:26px;
+    }
+
+    .status-badge{
+      display:inline-block;
+      padding:6px 16px;
+      border-radius:20px;
+      font-size:13px;
+      font-weight:bold;
+      margin-bottom:12px;
+    }
+
+    .status-pronto{
+      background:#e8f5e9;
+      color:var(--verde);
+    }
+
+    .badge-cat{
+      background:#e3f2fd;
+      color:var(--azul-escuro);
+    }
+
+    .simulado-card h3{
+      color:var(--azul-escuro);
+      margin-bottom:8px;
+    }
+
+    .simulado-card p{
+      color:var(--muted);
+    }
+
+    .btn-iniciar,
+    .btn-demo{
+      padding:14px;
+      border-radius:10px;
+      text-align:center;
+      font-weight:bold;
+      display:block;
+      text-decoration:none;
+      margin:12px 0;
+      transition:.25s;
+    }
+
+    .btn-iniciar{
+      background:var(--azul-escuro);
+      color:white;
+    }
+
+    .btn-iniciar:hover{
+      background:var(--roxo);
+    }
+
+    .btn-demo{
+      background:transparent;
+      border:2px solid var(--azul-claro);
+      color:var(--azul-claro);
+    }
+
+    .btn-demo:hover{
+      background:var(--azul-claro);
+      color:white;
+    }
+
+    .lista-section{
+      background:#fff;
+    }
+
+    .lista-box{
+      max-width:1100px;
+      margin:0 auto;
+      background:#f8fbff;
+      border:1px solid #dfe8f2;
+      border-radius:20px;
+      padding:28px;
+      box-shadow:var(--shadow);
+    }
+
+    .lista-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:12px 26px;
+      margin-top:18px;
+    }
+
+    .lista-item{
+      background:#fff;
+      border:1px solid #e7edf4;
+      border-radius:12px;
+      padding:14px 16px;
+      color:var(--azul-escuro);
+      font-weight:600;
+    }
+
+    .depoimentos{
+      background:#fff;
+      padding:80px 5%;
+    }
+
+    .depoimentos-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:25px;
+      max-width:1200px;
+      margin:0 auto;
+    }
+
+    .depoimento-card{
+      background:#f8f9fa;
+      padding:25px;
+      border-radius:16px;
+      box-shadow:0 6px 20px rgba(0,0,0,.08);
+    }
+
+    .depoimento-card p{
+      margin-bottom:14px;
+      color:#404040;
+    }
+
+    .mini-portal{
+      max-width:1300px;
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:22px;
+    }
+
+    .mini-box{
+      background:#fff;
+      border-radius:18px;
+      box-shadow:var(--shadow);
+      padding:24px;
+      transition:.25s;
+    }
+
+    .mini-box:hover{
+      transform:translateY(-6px);
+    }
+
+    .mini-box .icon{
+      font-size:42px;
+      display:block;
+      margin-bottom:12px;
+    }
+
+    .mini-box h3{
+      color:var(--azul-escuro);
+      margin-bottom:10px;
+    }
+
+    .mini-box p{
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    .dev-section,
+    .youtube-section{
+      padding:80px 5%;
+      text-align:center;
+      background:white;
+    }
+
+    .youtube-btn{
+      display:inline-flex;
+      align-items:center;
+      gap:12px;
+      background:#ff0000;
+      color:white;
+      padding:14px 32px;
+      border-radius:50px;
+      font-size:18px;
+      font-weight:600;
+      text-decoration:none;
+      box-shadow:0 4px 15px rgba(255,0,0,.4);
+      transition:.25s;
+    }
+
+    .youtube-btn:hover{
+      transform:translateY(-3px);
+    }
+
+    footer{
+      background:var(--azul-escuro);
+      color:white;
+      padding:50px 5%;
+      text-align:center;
+    }
+
+    .footer-links{
+      display:flex;
+      justify-content:center;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-bottom:18px;
+    }
+
+    .footer-links a{
+      text-decoration:none;
+      color:white;
+      padding:12px 18px;
+      border-radius:12px;
+      font-weight:700;
+      background:rgba(255,255,255,.08);
+    }
+
+    .footer-links a:hover{
+      background:rgba(255,255,255,.16);
+    }
+
+    .chat-flutuante{
+      position:fixed;
+      bottom:24px;
+      right:24px;
+      background:#25D366;
+      width:68px;
+      height:68px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:38px;
+      color:white;
+      box-shadow:0 8px 25px rgba(37,211,102,.5);
+      z-index:9999;
+      text-decoration:none;
+    }
+
+    #botaoFlutuante{
+      position:fixed;
+      bottom:24px;
+      left:24px;
+      right:auto;
+      background:#00c853;
+      color:#fff;
+      padding:16px 22px;
+      border-radius:50px;
+      font-weight:bold;
+      text-decoration:none;
+      box-shadow:0 8px 20px rgba(0,0,0,0.3);
+      z-index:999;
+      animation:pulse 2s infinite;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      white-space:nowrap;
+      max-width:calc(100vw - 48px);
+    }
+
+    @keyframes pulse{
+      0%{transform:scale(1);}
+      50%{transform:scale(1.08);}
+      100%{transform:scale(1);}
+    }
+
+    #popup{
+      position:fixed;
+      inset:0;
+      background:rgba(0,0,0,.72);
+      display:none;
+      justify-content:center;
+      align-items:center;
+      z-index:2000;
+      padding:18px;
+    }
+
+    .popup-content{
+      background:#fff;
+      padding:30px;
+      border-radius:16px;
+      text-align:center;
+      position:relative;
+      max-width:420px;
+      width:100%;
+      box-shadow:0 18px 40px rgba(0,0,0,.22);
+    }
+
+    .popup-content h2{
+      color:var(--azul-escuro);
+      margin-bottom:10px;
+    }
+
+    .popup-content p{
+      color:var(--muted);
+      margin-bottom:18px;
+    }
+
+    .popup-content a{
+      display:block;
+      margin-top:15px;
+      background:#0033cc;
+      color:#fff;
+      padding:14px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:bold;
+    }
+
+    .popup-content span{
+      position:absolute;
+      top:10px;
+      right:15px;
+      cursor:pointer;
+      font-size:18px;
+      font-weight:bold;
+    }
+
+    @media (max-width:1200px){
+      .destaques-layout{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media (max-width:768px){
+      header{
+        flex-direction:column;
+        padding:15px 5%;
+        gap:18px;
+      }
+
+      .ticker-wrapper{
+        margin-top:160px;
+      }
+
+      .nav-menu{
+        gap:14px;
+        font-size:14px;
+        justify-content:center;
+      }
+
+      .social-btn{
+        width:38px;
+        height:38px;
+        font-size:18px;
+      }
+
+      .hero{
+        padding:70px 5% 70px;
+      }
+
+      .hero h1{
+        font-size:34px;
+      }
+
+      .hero p{
+        font-size:16px;
+      }
+
+      .section-title{
+        font-size:28px;
+      }
+
+      .venda-box h2{
+        font-size:28px;
+      }
+
+      #botaoFlutuante{
+        left:16px;
+        right:16px;
+        bottom:14px;
+        width:auto;
+        max-width:none;
+        padding:14px 18px;
+        font-size:18px;
+        line-height:1.3;
+        text-align:center;
+        white-space:normal;
+      }
+
+      .chat-flutuante{
+        bottom:82px;
+        right:18px;
+        width:60px;
+        height:60px;
+        font-size:32px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-container">
+      <span class="logo-icon">🎓</span>
+      <div class="logo-text">Gabarito <span>MAX</span></div>
+    </div>
+
+    <nav class="nav-menu">
+      <a href="#destaques">Destaques</a>
+      <a href="#simulados">Simulados</a>
+      <a href="#lista-simulados">Lista A-Z</a>
+      <a href="#materiais">Materiais</a>
+      <a href="#artigos">Artigos</a>
+      <a href="https://simulado-analista-beberibe.netlify.app/" target="_blank">Simulado Beberibe</a>
+    </nav>
+
+    <div class="social-buttons">
+      <a href="https://www.instagram.com/portal.gabaritomax" target="_blank" class="social-btn btn-instagram" title="Instagram">
+        <svg width="24" height="24" fill="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.849.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 3.463.262 1.262 2.463 1.072 6.053.014 7.333 0 7.741 0 12c0 4.259.014 4.667.072 5.947.19 3.59 2.391 5.791 5.981 5.981 1.28.058 1.688.072 5.947.072 4.259 0 4.667-.014 5.947-.072 3.59-.19 5.791-2.391 5.981-5.981.058-1.28.072-1.688.072-5.947 0-4.259-.014-4.667-.072-5.947-.19-3.59-2.391-5.791-5.981-5.981C16.667.014 16.259 0 12 0z"/>
+          <circle cx="12" cy="12" r="3.25"/>
+          <circle cx="17.5" cy="6.5" r="1.5"/>
+        </svg>
+      </a>
+
+      <a href="https://wa.me/5585997120397?text=Olá!%20Vi%20o%20site%20do%20Gabarito%20Max%20e%20quero%20saber%20mais%20sobre%20os%20simulados%20premium.%20Pode%20me%20ajudar?" target="_blank" class="social-btn btn-whatsapp" title="WhatsApp">
+        <svg width="24" height="24" fill="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.485-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.669-1.612-.917-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.372-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+          <path d="M12 2C6.48 2 2 6.59 2 12.25c0 2.22.72 4.27 1.94 5.94L2 22l3.86-1.01C8.07 21.78 9.99 22 12 22c5.52 0 10-4.59 10-10.25S17.52 2 12 2zm0 18.25c-1.88 0-3.63-.55-5.12-1.5L4.5 20.5l1.75-1.75C7.2 17.8 9.5 17 12 17c4.41 0 8-3.59 8-8.25S16.41 2 12 2z"/>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <div class="ticker-wrapper">
+    <div class="ticker-label">Destaques do Gabarito Max</div>
+    <div class="ticker-container">
+      <div class="ticker-content">
+        <div>
+          <span>Simulado Analista Administrativo segue em destaque →</span>
+          <span>INSS Premium com treino direcionado →</span>
+          <span>Linha escolar cresce com 9º ano e 1º ano →</span>
+          <span>Técnico em Enfermagem com 900 questões digitais →</span>
+          <span>Marítimo & Offshore no catálogo premium →</span>
+          <span>Mais áreas serão expandidas em breve</span>
+        </div>
+        <div>
+          <span>Simulado Analista Administrativo segue em destaque →</span>
+          <span>INSS Premium com treino direcionado →</span>
+          <span>Linha escolar cresce com 9º ano e 1º ano →</span>
+          <span>Técnico em Enfermagem com 900 questões digitais →</span>
+          <span>Marítimo & Offshore no catálogo premium →</span>
+          <span>Mais áreas serão expandidas em breve</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="hero">
+    <h1>Portal moderno de simulados, revisão e preparação digital</h1>
+    <p>O Gabarito Max agora reúne visual de portal, catálogo organizado, linha escolar, áreas premium e uma navegação mais forte para vender mais e reter mais visitantes.</p>
+
+    <div class="hero-actions">
+      <a href="#simulados" class="hero-btn primary">🚀 Explorar Simulados</a>
+      <a href="https://www.youtube.com/@Portal_Gabarito_Max" target="_blank" class="hero-btn secondary">▶ Ver demonstrações</a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat-card">
+        <strong>12+</strong>
+        <span>Simulados e revisões em destaque</span>
+      </div>
+      <div class="stat-card">
+        <strong>900</strong>
+        <span>Questões em linhas específicas</span>
+      </div>
+      <div class="stat-card">
+        <strong>Digital</strong>
+        <span>Formato quiz prático e dinâmico</span>
+      </div>
+      <div class="stat-card">
+        <strong>Premium</strong>
+        <span>Conteúdo rico em informação</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="destaques" class="section">
+    <h2 class="section-title">Destaques e atualizações</h2>
+    <p class="section-subtitle">Área em estilo portal para reforçar autoridade visual, aumentar retenção e valorizar seus simulados e revisões mais estratégicos.</p>
+
+    <div class="destaques-layout">
+      <div class="news-grid">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1200&auto=format&fit=crop" alt="Beberibe">
+          <div class="card-content">
+            <span class="badge">Beberibe</span>
+            <h3>Analista Administrativo continua entre os simulados mais procurados</h3>
+            <p>O formato objetivo e focado em conhecimentos específicos segue atraindo candidatos da região.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop" alt="INSS">
+          <div class="card-content">
+            <span class="badge">INSS</span>
+            <h3>Preparação previdenciária segue forte dentro da linha premium</h3>
+            <p>Quem estuda para o INSS encontra no portal um treino mais prático, rico e estimulante.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1200&auto=format&fit=crop" alt="Bancárias">
+          <div class="card-content">
+            <span class="badge">Bancárias</span>
+            <h3>Banco do Brasil e Caixa continuam no radar de quem busca estabilidade</h3>
+            <p>Simulados específicos ajudam no treino técnico e na constância de estudo.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=1200&auto=format&fit=crop" alt="Enfermagem">
+          <div class="card-content">
+            <span class="badge">Saúde</span>
+            <h3>Linha de enfermagem fortalece o portal com prática intensa e revisão contínua</h3>
+            <p>O simulado digital ajuda a manter teoria e prática em ritmo constante.</p>
+          </div>
+        </div>
+      </div>
+
+      <aside class="sidebar-box">
+        <div class="sidebar-title">Em alta no portal</div>
+        <div class="sidebar-list">
+          <div class="sidebar-item">
+            <span>Mais acessado</span><br>
+            <a href="https://simulado-analista-beberibe.netlify.app/" target="_blank">Simulado digital Concurso Analista Administrativo</a>
+          </div>
+          <div class="sidebar-item">
+            <span>Premium</span><br>
+            <a href="https://pay.kiwify.com.br/PTaBuUI" target="_blank">Gabarito Max INSS - Área Premium</a>
+          </div>
+          <div class="sidebar-item">
+            <span>Escolar</span><br>
+            <a href="#lista-simulados">Linha escolar com 9º ano e 1º ano</a>
+          </div>
+          <div class="sidebar-item">
+            <span>Saúde</span><br>
+            <a href="https://pay.kiwify.com.br/DCdcdmJ" target="_blank">Simulador Gabarito Max - Técnico em Enfermagem</a>
+          </div>
+          <div class="sidebar-item">
+            <span>YouTube</span><br>
+            <a href="https://www.youtube.com/@Portal_Gabarito_Max" target="_blank">Vídeos demonstrativos dos simulados</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="venda-section">
+    <div class="venda-box">
+      <h2>Seu portal de preparação ficou mais forte</h2>
+      <p>Mais moderno, mais confiável visualmente e mais pronto para conversão. Agora com linha premium, escolar e áreas profissionais em uma só vitrine.</p>
+      <a href="#simulados" class="venda-btn">🛒 Acessar Simulados Premium</a>
+    </div>
+  </section>
+
+  <section id="simulados" class="section" style="background:#f9f9f9;">
+    <h2 class="section-title">Catálogo de Simulados</h2>
+    <p class="section-subtitle">Seu catálogo foi ampliado visualmente e continua com filtros, links de acesso e identidade de plataforma premium.</p>
+
+    <div class="filter-container">
+      <button class="filter-btn active" onclick="filterSelection('all', this)">Todos</button>
+      <button class="filter-btn" onclick="filterSelection('conc', this)">Concursos Públicos</button>
+      <button class="filter-btn" onclick="filterSelection('corp', this)">Corporativo</button>
+      <button class="filter-btn" onclick="filterSelection('edu', this)">Educação</button>
+    </div>
+
+    <div class="simulados-grid">
+      <div class="simulado-card filter-item edu">
+        <div class="card-header"></div>
+        <div class="card-body">
+          <span class="status-badge badge-cat">EdTech</span>
+          <h3>Gabarito Max - Especialista em E-learning & DI</h3>
+          <p>Design Instrucional, Andragogia e Tecnologias Educacionais.</p>
+          <p style="color:#0066cc;font-weight:600;margin:18px 0 15px;">
+            ✅ Simulado Premium inclui Apostila completa com 105 páginas
+          </p>
+          <a href="https://pay.kiwify.com.br/ZdGjxyf" target="_blank" class="btn-iniciar" style="background:var(--verde);">👑 Comprar Acesso Completo</a>
+        </div>
+      </div>
+
+      <div class="simulado-card filter-item conc">
+        <div class="card-header"></div>
+        <div class="card-body">
+          <span class="status-badge status-pronto">Câmara de Beberibe</span>
+          <h3>Simulado digital Concurso Analista Administrativo</h3>
+          <p>Conhecimentos Específicos e Legislação Municipal.</p>
+          <a href="https://simulado-analista-beberibe.netlify.app/" target="_blank" class="btn-iniciar">🚀 Testar Grátis</a>
+          <a href="https://pay.kiwify.com.br/V6QuXFS" target="_blank" class="btn-demo">👑 Liberar Completo</a>
+        </div>
+      </div>
+
+      <div class="simulado-card filter-item conc">
+        <div class="card-header"></div>
+        <div class="card-body">
+          <span class="status-badge status-pronto">INSS</span>
+          <h3>Gabarito Max INSS - Área Premium</h3>
+          <p>Treino focado e revisão prática para quem quer manter consistência de estudo.</p>
+          <a href="https://cincoregioes-star.github.io/simuladomax-inss-gratis/" target="_blank" class="btn-iniciar">🚀 Testar Grátis</a>
+          <a href="https://pay.kiwify.com.br/PTaBuUI" target="_blank" class="btn-demo">👑 Liberar Completo</a>
+        </div>
+      </div>
+
+      <div class="simulado-card filter-item conc">
+        <div class="card-header"></div>
+        <div class="card-body">
+          <span class="status-badge status-pronto">Morada Nova</span>
+          <h3>Gabarito Max - Concurso Morada Nova (Agente de Trânsito)</h3>
+          <p>Questões comentadas para prática regional e reforço de desempenho.</p>
+          <a href="https://cincoregioes-star.github.io/gabarito-max-moradanova_teste/" target="_blank" class="btn-iniciar">🚀 Testar Grátis</a>
+          <a href="https://pay.kiwify.com.br/Xl9jnTb" target="_blank" class="btn-demo">👑 Liberar Completo</a>
+        </div>
+      </div>
+
+      <div class="simulado-card filter-item conc">
+        <div class="card-header"></div>
+        <div class="card-body">
+          <span class="status-badge status-pronto">Bancárias</span>
+          <h3>Gabarito Max Bancárias - Premium</h3>
+          <p>Banco do Brasil e Caixa em uma linha prática de revisão e simulado.</p>
+          <a href="https://cincoregioes-star.github.io/gabarito-max-bancarias/" target="_blank" class="btn-iniciar">🚀 Testar Grátis</a>
+          <a href="https://kiwify.app/A4s1RsQ" target="_blank" class="btn-demo">👑 Versão Premium</a>
+        </div>
+      </div>
+
+      <div class="simulado-card filter-item corp">
+        <div class="card-header" style="background:var(--roxo);"></div>
+        <div class="card-body">
+          <span class="status-badge badge-cat">Marítimo</span>
+          <h3>Simulador Gabarito Max - Marítimo & Offshore</h3>
+          <p>Conteúdo direcionado para normas, segurança e rotina da área.</p>
+          <a href="https://pay.kiwify.com.br/2mO8t57" target="_blank" class="btn-iniciar" style="background:var(--verde);">👑 Comprar Acesso Completo</a>
+        </div>
+      </div>
+
+      <div class="simulado-card filter-item corp">
+        <div class="card-header" style="background:var(--roxo);"></div>
+        <div class="card-body">
+          <span class="status-badge badge-cat">Saúde</span>
+          <h3>Simulador Gabarito Max - Técnico em Enfermagem</h3>
+          <p>Treino digital com foco técnico e prática intensa para revisão contínua.</p>
+          <a href="https://pay.kiwify.com.br/DCdcdmJ" target="_blank" class="btn-iniciar" style="background:var(--verde);">👑 Comprar Acesso Completo</a>
+        </div>
+      </div>
+
+      <div class="simulado-card filter-item edu">
+        <div class="card-header"></div>
+        <div class="card-body">
+          <span class="status-badge badge-cat">Ensino Fundamental</span>
+          <h3>Gabarito Max 9º Ano - Revisão Interativa (1º Trimestre)</h3>
+          <p>450 questões voltadas para adolescentes em formato mais dinâmico e didático.</p>
+          <a href="https://cincoregioes-star.github.io/gabarito-max-9ano/" target="_blank" class="btn-iniciar">🚀 Acessar Agora</a>
+          <a href="https://pay.kiwify.com.br/neZ2oHx" target="_blank" class="btn-demo">👑 Próximos Trimestres</a>
+        </div>
+      </div>
+
+      <div class="simulado-card filter-item edu">
+        <div class="card-header"></div>
+        <div class="card-body">
+          <span class="status-badge badge-cat">Ensino Médio</span>
+          <h3>Gabarito Max - Revisão Gamificada 1º Ano</h3>
+          <p>Formato quiz pensado para tornar o estudo mais leve, interativo e estimulante.</p>
+          <a href="#" class="btn-iniciar" style="background:#999;cursor:not-allowed;">Em evolução</a>
+          <a href="#" class="btn-demo" style="border-color:#999;color:#999;cursor:not-allowed;">Breve</a>
+        </div>
+      </div>
+
+      <div class="simulado-card filter-item edu">
+        <div class="card-header"></div>
+        <div class="card-body">
+          <span class="status-badge badge-cat">Ensino Médio</span>
+          <h3>Gabarito Max - Revisão Nacional 1º Ano</h3>
+          <p>Estrutura ampla de revisão para expansão da linha escolar do portal.</p>
+          <a href="#" class="btn-iniciar" style="background:#999;cursor:not-allowed;">Em evolução</a>
+          <a href="#" class="btn-demo" style="border-color:#999;color:#999;cursor:not-allowed;">Breve</a>
+        </div>
+      </div>
+
+      <div class="simulado-card filter-item corp">
+        <div class="card-header" style="background:var(--roxo);"></div>
+        <div class="card-body">
+          <span class="status-badge badge-cat">Alta Performance</span>
+          <h3>Data & AI Interview Pro - Simulador de Alta Performance</h3>
+          <p>Treino avançado para perfil profissional com foco técnico e desempenho.</p>
+          <a href="#" class="btn-iniciar" style="background:#999;cursor:not-allowed;">Em evolução</a>
+          <a href="#" class="btn-demo" style="border-color:#999;color:#999;cursor:not-allowed;">Breve</a>
+        </div>
+      </div>
+
+      <div class="simulado-card filter-item conc">
+        <div class="card-header"></div>
+        <div class="card-body">
+          <span class="status-badge status-pronto">Câmara de Beberibe</span>
+          <h3>Recepcionista</h3>
+          <p>Atendimento ao público e rotinas administrativas.</p>
+          <a href="#" class="btn-iniciar" style="background:#999;cursor:not-allowed;">Em Desenvolvimento</a>
+          <a href="https://pay.kiwify.com.br/ZdGjxyf" target="_blank" class="btn-demo">👑 Comprar Acesso</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="lista-simulados" class="section lista-section">
+    <h2 class="section-title">Lista de simulados disponíveis em ordem alfabética</h2>
+    <p class="section-subtitle">Organização A-Z para facilitar a visualização rápida do catálogo atual.</p>
+
+    <div class="lista-box">
+      <div class="lista-grid">
+        <div class="lista-item">Data & AI Interview Pro - Simulador de Alta Performance</div>
+        <div class="lista-item">Gabarito Max - Concurso Morada Nova (Agente de Trânsito)</div>
+        <div class="lista-item">Gabarito Max - Especialista em E-learning & DI</div>
+        <div class="lista-item">Gabarito Max - Revisão Gamificada 1º Ano</div>
+        <div class="lista-item">Gabarito Max - Revisão Nacional 1º Ano</div>
+        <div class="lista-item">Gabarito Max 9º Ano - Revisão Interativa (1º Trimestre)</div>
+        <div class="lista-item">Gabarito Max Bancárias - Premium</div>
+        <div class="lista-item">Gabarito Max INSS - Área Premium</div>
+        <div class="lista-item">Simulado digital Concurso Analista Administrativo</div>
+        <div class="lista-item">Simulador Gabarito Max - Marítimo & Offshore</div>
+        <div class="lista-item">Simulador Gabarito Max - Técnico em Enfermagem</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="depoimentos">
+    <h2 class="section-title">O que estão dizendo</h2>
+    <p class="section-subtitle">Relatos de pessoas que compraram, estão estudando e usam os simulados com frequência na preparação.</p>
+
+    <div class="depoimentos-grid">
+      <div class="depoimento-card">
+        <p>"Comprei o simulado da Câmara de Beberibe para me preparar com mais organização. Achei muito útil, fácil de aprender e bem rico em informações. O formato digital deixa o estudo mais leve e mais dinâmico no dia a dia."</p>
+        <strong>— Aluna em preparação para concursos municipais</strong>
+      </div>
+
+      <div class="depoimento-card">
+        <p>"Estou usando o material do INSS e gostei bastante da forma como as questões aparecem. O estudo fica mais prático, mais interessante e ajuda a manter o foco. É um conteúdo que realmente dá vontade de continuar estudando."</p>
+        <strong>— Estudante focado na área do INSS</strong>
+      </div>
+
+      <div class="depoimento-card">
+        <p>"A apostila com 105 páginas ficou muito boa para acompanhar o conteúdo com calma. O material está claro, útil e rico em informações. Ajuda bastante a revisar a teoria e depois praticar no simulado."</p>
+        <strong>— Usuário do material E-learning & DI</strong>
+      </div>
+
+      <div class="depoimento-card">
+        <p>"Estou me preparando para quando abrir concurso de enfermagem. Terminei os estudos na escola técnica de enfermagem e agora estou praticando com o simulado digital de 900 questões em modelo quiz, mantendo toda a teoria em dia. Está sendo muito útil para revisar e aprender mais."</p>
+        <strong>— Técnica em enfermagem em fase de preparação</strong>
+      </div>
+
+      <div class="depoimento-card">
+        <p>"O simulado do 9º ano com 450 questões ficou muito bom para adolescentes. O estudo fica mais leve, mais divertido e ajuda bastante na fixação dos conteúdos. É uma forma prática de aprender sem ficar cansativo."</p>
+        <strong>— Responsável por estudante do 9º ano fundamental</strong>
+      </div>
+
+      <div class="depoimento-card">
+        <p>"A proposta do 1º ano do ensino médio com 900 questões digitais é excelente. O formato quiz deixa o estudo mais interessante, rico em informações e com ótima sequência para treinar bastante. Tem muito potencial, principalmente quando vierem também os simulados do 6º, 7º, 8º ano e depois 2º e 3º ano do ensino médio."</p>
+        <strong>— Interessado na linha de simulados escolares</strong>
+      </div>
+    </div>
+  </section>
+
+  <section id="artigos" class="section">
+    <h2 class="section-title">Portal de conteúdo</h2>
+    <p class="section-subtitle">Área pronta para evoluir com notícias, dicas, páginas de venda específicas e novas linhas de estudo.</p>
+
+    <div class="mini-portal">
+      <div class="mini-box">
+        <span class="icon">📰</span>
+        <h3>Notícias de concursos</h3>
+        <p>Espaço para publicar novidades, movimentações de editais e oportunidades por área.</p>
+      </div>
+      <div class="mini-box">
+        <span class="icon">📘</span>
+        <h3>Dicas de estudo</h3>
+        <p>Bloco ideal para conteúdo educativo, SEO e fortalecimento de marca no Google.</p>
+      </div>
+      <div class="mini-box">
+        <span class="icon">🏫</span>
+        <h3>Linha escolar</h3>
+        <p>Prepare a expansão para 6º, 7º, 8º ano fundamental e 2º e 3º ano do ensino médio.</p>
+      </div>
+      <div class="mini-box">
+        <span class="icon">💰</span>
+        <h3>Ofertas premium</h3>
+        <p>Área estratégica para destacar seus simulados campeões de venda e lançamentos futuros.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="materiais" class="section" style="background:#fff;">
+    <h2 class="section-title">Materiais em PDF</h2>
+    <p class="section-subtitle">Uma seção simples e moderna para reforçar seus materiais gratuitos e levar o visitante ao funil principal.</p>
+
+    <div style="text-align:center;max-width:600px;margin:0 auto;">
+      <div style="font-size:60px;margin-bottom:15px;">📘</div>
+      <h3 style="color:var(--azul-escuro);margin-bottom:10px;">10 Questões de Administração Pública</h3>
+      <p style="color:var(--muted);margin-bottom:22px;">Material introdutório ideal para atrair visitantes e conduzir ao simulado principal.</p>
+      <a href="https://simulado-analista-beberibe.netlify.app/" target="_blank" class="btn-iniciar" style="background:var(--verde);display:inline-block;padding:14px 26px;">
+        📘 Acessar Simulado
+      </a>
+    </div>
+  </section>
+
+  <section class="dev-section">
+    <h2 class="section-title" style="color:#ffc107;">Sobre o criador</h2>
+    <h3 style="color:var(--azul-escuro);font-size:28px;margin-bottom:10px;">Carlos Tavares</h3>
+    <p>Licenciatura em Geografia • Graduando em Gestão Pública</p>
+    <p>Pós-graduações: Ciências de Dados • IA • Políticas Públicas • Serviço Social • Administração Escolar</p>
+    <p style="margin-top:25px;">📧 <strong>cincoregioes@gmail.com</strong></p>
+  </section>
+
+  <section class="youtube-section">
+    <h2 class="section-title">Assista aos vídeos demonstrativos no YouTube</h2>
+    <p class="section-subtitle">Mostre a experiência do simulado na prática e aumente a confiança do visitante antes da compra.</p>
+    <a href="https://www.youtube.com/@Portal_Gabarito_Max" target="_blank" class="youtube-btn">
+      ▶ Portal Gabarito Max
+    </a>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="#simulados">Simulados</a>
+      <a href="#lista-simulados">Lista A-Z</a>
+      <a href="#materiais">Materiais</a>
+      <a href="https://www.instagram.com/portal.gabaritomax" target="_blank">Instagram</a>
+      <a href="https://www.youtube.com/@Portal_Gabarito_Max" target="_blank">YouTube</a>
+    </div>
+    <p><strong>Gabarito MAX</strong> — Plataforma de Simulados Online © 2026</p>
+  </footer>
+
+  <a href="https://wa.me/5585997120397?text=Olá!%20Vi%20o%20site%20do%20Gabarito%20Max%20e%20quero%20saber%20mais%20sobre%20os%20simulados%20premium.%20Pode%20me%20ajudar?" target="_blank" class="chat-flutuante">📲</a>
+
+  <a href="#simulados" id="botaoFlutuante">🚀 Começar Simulado</a>
+
+  <div id="popup">
+    <div class="popup-content">
+      <h2>🔥 Comece agora no Gabarito Max</h2>
+      <p>Simulados focados em concursos, revisão escolar, INSS, enfermagem, bancárias e muito mais.</p>
+      <a href="#simulados">Acessar Agora</a>
+      <span onclick="fecharPopup()">✖</span>
+    </div>
+  </div>
+
+  <script>
+    function filterSelection(cat, el) {
+      const cards = document.querySelectorAll('.simulado-card');
+      const botoes = document.querySelectorAll('.filter-btn');
+
+      botoes.forEach(btn => btn.classList.remove('active'));
+      if (el) el.classList.add('active');
+
+      cards.forEach(card => {
+        card.style.display = (cat === 'all' || card.classList.contains(cat)) ? 'block' : 'block';
+        if (!(cat === 'all' || card.classList.contains(cat))) {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    setTimeout(() => {
+      const popup = document.getElementById("popup");
+      if (popup) popup.style.display = "flex";
+    }, 6000);
+
+    function fecharPopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+
+    document.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        let cliques = Number(localStorage.getItem("cliques") || 0);
+        cliques++;
+        localStorage.setItem("cliques", cliques);
+        console.log("Cliques:", cliques);
+      });
+    });
+
+    window.onload = function() {
+      filterSelection('all', document.querySelector('.filter-btn'));
+    };
+  </script>
+</body>
+</html>
