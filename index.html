@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gabarito Max - Portal de Simulados</title>
+  <title>Gabarito Max - Portal Premium de Simulados</title>
   <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1041/1041728.png" type="image/png">
 
   <style>
@@ -15,20 +15,20 @@
     }
 
     :root{
-      --azul-escuro:#121c4e;
-      --azul:#0f3cc9;
-      --azul-claro:#00bef1;
-      --roxo:#7a1fa0;
-      --amarelo:#ffc107;
-      --verde:#00c853;
-      --vermelho:#d90429;
-      --fundo:#f4f6fb;
+      --azul-escuro:#07111f;
+      --azul:#0f766e;
+      --azul-claro:#14b8a6;
+      --roxo:#7c3aed;
+      --amarelo:#facc15;
+      --verde:#22c55e;
+      --vermelho:#ef4444;
+      --fundo:#eef6ff;
       --card:#ffffff;
-      --texto:#262626;
-      --muted:#5f6b7a;
-      --shadow:0 10px 26px rgba(0,0,0,.12);
-      --shadow-hover:0 16px 34px rgba(0,0,0,.16);
-      --radius:18px;
+      --texto:#172033;
+      --muted:#5f6f86;
+      --shadow:0 12px 30px rgba(7,17,31,.12);
+      --shadow-hover:0 18px 42px rgba(7,17,31,.18);
+      --radius:20px;
     }
 
     body{
@@ -81,7 +81,7 @@
     }
 
     header{
-      background:linear-gradient(90deg,var(--azul-claro) 0%,var(--roxo) 100%);
+      background:linear-gradient(90deg,#07111f 0%,#0f766e 52%,#7c3aed 100%);
       padding:16px 5%;
       position:fixed;
       top:0;
@@ -162,7 +162,7 @@
 
     .hero{
       background:
-        linear-gradient(rgba(18,28,78,.84),rgba(18,28,78,.90)),
+        linear-gradient(rgba(7,17,31,.88),rgba(15,118,110,.82)),
         url('https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop') center/cover;
       color:white;
       padding:90px 5% 80px;
@@ -377,7 +377,7 @@
     .venda-box{
       max-width:1100px;
       margin:0 auto;
-      background:linear-gradient(135deg,#0f3cc9,#7a1fa0);
+      background:linear-gradient(135deg,#07111f,#0f766e 55%,#7c3aed);
       color:white;
       border-radius:22px;
       padding:42px 24px;
@@ -434,6 +434,66 @@
     .filter-btn:hover{
       background:var(--azul-claro);
       color:white;
+    }
+
+    .catalog-tools{
+      max-width:900px;
+      margin:0 auto 28px;
+      display:flex;
+      gap:12px;
+      align-items:center;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+
+    .search-input{
+      width:min(520px,100%);
+      padding:14px 18px;
+      border-radius:999px;
+      border:2px solid rgba(20,184,166,.28);
+      background:white;
+      color:var(--azul-escuro);
+      font-weight:600;
+      box-shadow:0 8px 18px rgba(7,17,31,.08);
+      outline:none;
+    }
+
+    .search-input:focus{
+      border-color:var(--azul-claro);
+      box-shadow:0 0 0 4px rgba(20,184,166,.14);
+    }
+
+    .copa-card{
+      border:2px solid rgba(250,204,21,.55);
+      background:
+        radial-gradient(circle at top right, rgba(250,204,21,.20), transparent 34%),
+        #ffffff;
+      position:relative;
+    }
+
+    .copa-card::before{
+      content:"NOVO";
+      position:absolute;
+      top:14px;
+      right:14px;
+      background:var(--amarelo);
+      color:#111;
+      font-size:12px;
+      font-weight:900;
+      padding:5px 10px;
+      border-radius:999px;
+      box-shadow:0 6px 14px rgba(250,204,21,.25);
+    }
+
+    .btn-row{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
+      margin-top:14px;
+    }
+
+    @media(max-width:560px){
+      .btn-row{grid-template-columns:1fr;}
     }
 
     .simulados-grid{
@@ -879,28 +939,28 @@
     <div class="ticker-container">
       <div class="ticker-content">
         <div>
-          <span>Simulado Analista Administrativo segue em destaque →</span>
+          <span>Copa 2026 Premium com 240 questões →</span>
           <span>INSS Premium com treino direcionado →</span>
           <span>Linha escolar cresce com 9º ano e 1º ano →</span>
           <span>Técnico em Enfermagem com 900 questões digitais →</span>
           <span>Marítimo & Offshore no catálogo premium →</span>
-          <span>Mais áreas serão expandidas em breve</span>
+          <span>Teste grátis da Copa já disponível</span>
         </div>
         <div>
-          <span>Simulado Analista Administrativo segue em destaque →</span>
+          <span>Copa 2026 Premium com 240 questões →</span>
           <span>INSS Premium com treino direcionado →</span>
           <span>Linha escolar cresce com 9º ano e 1º ano →</span>
           <span>Técnico em Enfermagem com 900 questões digitais →</span>
           <span>Marítimo & Offshore no catálogo premium →</span>
-          <span>Mais áreas serão expandidas em breve</span>
+          <span>Teste grátis da Copa já disponível</span>
         </div>
       </div>
     </div>
   </div>
 
   <section class="hero">
-    <h1>Portal moderno de simulados, revisão e preparação digital</h1>
-    <p>O Gabarito Max agora reúne visual de portal, catálogo organizado, linha escolar, áreas premium e uma navegação mais forte para vender mais e reter mais visitantes.</p>
+    <h1>Portal premium de simulados, revisão e preparação digital</h1>
+    <p>Catálogo organizado, filtros inteligentes, simulados grátis, versões premium e navegação mais forte para vender mais e reter mais visitantes.</p>
 
     <div class="hero-actions">
       <a href="#simulados" class="hero-btn primary">🚀 Explorar Simulados</a>
@@ -909,7 +969,7 @@
 
     <div class="hero-stats">
       <div class="stat-card">
-        <strong>12+</strong>
+        <strong>13+</strong>
         <span>Simulados e revisões em destaque</span>
       </div>
       <div class="stat-card">
@@ -921,8 +981,8 @@
         <span>Formato quiz prático e dinâmico</span>
       </div>
       <div class="stat-card">
-        <strong>Premium</strong>
-        <span>Conteúdo rico em informação</span>
+        <strong>Copa 2026</strong>
+        <span>Teste grátis + Premium na Kiwify</span>
       </div>
     </div>
   </section>
@@ -990,6 +1050,10 @@
             <a href="https://pay.kiwify.com.br/DCdcdmJ" target="_blank">Simulador Gabarito Max - Técnico em Enfermagem</a>
           </div>
           <div class="sidebar-item">
+            <span>Copa 2026</span><br>
+            <a href="https://cincoregioes-star.github.io/-simulado-copa-isca/" target="_blank">Teste grátis da Copa do Mundo 2026</a>
+          </div>
+          <div class="sidebar-item">
             <span>YouTube</span><br>
             <a href="https://www.youtube.com/@Portal_Gabarito_Max" target="_blank">Vídeos demonstrativos dos simulados</a>
           </div>
@@ -1010,38 +1074,35 @@
     <h2 class="section-title">Catálogo de Simulados</h2>
     <p class="section-subtitle">Seu catálogo foi ampliado visualmente e continua com filtros, links de acesso e identidade de plataforma premium.</p>
 
+    <div class="catalog-tools">
+      <input id="buscaSimulado" class="search-input" type="search" placeholder="🔎 Buscar simulado por nome, área ou palavra-chave..." oninput="aplicarFiltros()">
+    </div>
+
     <div class="filter-container">
       <button class="filter-btn active" onclick="filterSelection('all', this)">Todos</button>
       <button class="filter-btn" onclick="filterSelection('conc', this)">Concursos Públicos</button>
       <button class="filter-btn" onclick="filterSelection('corp', this)">Corporativo</button>
       <button class="filter-btn" onclick="filterSelection('edu', this)">Educação</button>
+      <button class="filter-btn" onclick="filterSelection('copa', this)">Copa 2026</button>
     </div>
 
- <div class="simulado-card filter-item edu">
-  <div class="card-header" style="background:#0a45ff;"></div>
-  <div class="card-body">
-
-    <span class="status-badge badge-cat">Copa do Mundo</span>
-
-    <h3>Simulado Copa do Mundo 2026 - Versão Free</h3>
-
-    <p>
-      Entre no clima da Copa e teste seus conhecimentos sobre seleções,
-      história, curiosidades e grandes momentos do futebol mundial.
-    </p>
-
-    <p style="color:#0066cc;font-weight:600;margin:15px 0;">
-      ⚽ Desafio rápido • Treino divertido • Acesso imediato
-    </p>
-
-    <a href="https://cincoregioes-star.github.io/-simulado-copa-isca/" target="_blank" class="btn-iniciar" style="background:#00c853;">
-      🚀 Acessar Simulado Grátis
-    </a>
-
-  </div>
-</div>
-
     <div class="simulados-grid">
+      <div class="simulado-card filter-item edu copa copa-card">
+        <div class="card-header" style="background:linear-gradient(90deg,#22c55e,#facc15,#14b8a6);"></div>
+        <div class="card-body">
+          <span class="status-badge badge-cat">Copa do Mundo 2026</span>
+          <h3>Desafio Copa 2026 - Teste Grátis + Premium</h3>
+          <p>Teste gratuito no GitHub e versão premium completa pela Kiwify. Ideal para engajamento, tráfego e venda rápida.</p>
+          <p style="color:#0f766e;font-weight:800;margin:18px 0 10px;">
+            ⚽ Teste grátis • 240 questões no premium • Ranking final
+          </p>
+          <div class="btn-row">
+            <a href="https://cincoregioes-star.github.io/-simulado-copa-isca/" target="_blank" class="btn-iniciar" style="background:var(--verde);">🚀 Testar grátis</a>
+            <a href="https://pay.kiwify.com.br/8rMJ1I1" target="_blank" class="btn-demo" style="border-color:var(--amarelo);color:#9a6b00;">👑 Premium</a>
+          </div>
+        </div>
+      </div>
+
       <div class="simulado-card filter-item edu">
         <div class="card-header"></div>
         <div class="card-body">
@@ -1190,6 +1251,7 @@
         <div class="lista-item">Gabarito Max 9º Ano - Revisão Interativa (1º Trimestre)</div>
         <div class="lista-item">Gabarito Max Bancárias - Premium</div>
         <div class="lista-item">Gabarito Max INSS - Área Premium</div>
+        <div class="lista-item">Desafio Copa do Mundo 2026 - Teste Grátis + Premium</div>
         <div class="lista-item">Simulado digital Concurso Analista Administrativo</div>
         <div class="lista-item">Simulador Gabarito Max - Marítimo & Offshore</div>
         <div class="lista-item">Simulador Gabarito Max - Técnico em Enfermagem</div>
@@ -1311,33 +1373,43 @@
     <div class="popup-content">
       <h2>🔥 Comece agora no Gabarito Max</h2>
       <p>Simulados focados em concursos, revisão escolar, INSS, enfermagem, bancárias e muito mais.</p>
-      <a href="#simulados">Acessar Agora</a>
+      <a href="#simulados" onclick="fecharPopup()">Acessar Agora</a>
       <span onclick="fecharPopup()">✖</span>
     </div>
   </div>
 
   <script>
-    function filterSelection(cat, el) {
-      const cards = document.querySelectorAll('.simulado-card');
-      const botoes = document.querySelectorAll('.filter-btn');
+    let filtroAtual = 'all';
 
+    function filterSelection(cat, el) {
+      filtroAtual = cat;
+
+      const botoes = document.querySelectorAll('.filter-btn');
       botoes.forEach(btn => btn.classList.remove('active'));
       if (el) el.classList.add('active');
 
+      aplicarFiltros();
+    }
+
+    function aplicarFiltros(){
+      const termo = (document.getElementById('buscaSimulado')?.value || '').toLowerCase().trim();
+      const cards = document.querySelectorAll('.simulado-card');
+
       cards.forEach(card => {
-        card.style.display = (cat === 'all' || card.classList.contains(cat)) ? 'block' : 'block';
-        if (!(cat === 'all' || card.classList.contains(cat))) {
-          card.style.display = 'none';
-        }
+        const categoriaOk = filtroAtual === 'all' || card.classList.contains(filtroAtual);
+        const textoCard = card.innerText.toLowerCase();
+        const buscaOk = !termo || textoCard.includes(termo);
+        card.style.display = (categoriaOk && buscaOk) ? 'block' : 'none';
       });
     }
 
     setTimeout(() => {
       const popup = document.getElementById("popup");
-      if (popup) popup.style.display = "flex";
+      if (popup && !sessionStorage.getItem("popupGabaritoMaxFechado")) popup.style.display = "flex";
     }, 6000);
 
     function fecharPopup() {
+      sessionStorage.setItem("popupGabaritoMaxFechado", "1");
       document.getElementById("popup").style.display = "none";
     }
 
@@ -1351,7 +1423,7 @@
     });
 
     window.onload = function() {
-      filterSelection('all', document.querySelector('.filter-btn'));
+      filterSelection('all', document.querySelector('.filter-btn')); aplicarFiltros();
     };
   </script>
 </body>
