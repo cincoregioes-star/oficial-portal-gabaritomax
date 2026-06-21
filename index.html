@@ -1,163 +1,819 @@
-<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Gabarito Max | Simulados Digitais</title><meta name="description" content="Gabarito Max: simulados digitais para ENEM, concursos e profissões."><style>
-:root{--bg:#dfeaf7;--text:#111827;--muted:#5f6b7a;--yellow:#facc15;--cyan:#06b6d4;--shadow:0 16px 38px rgba(7,17,31,.12);--max:1240px}
-*{box-sizing:border-box;margin:0;padding:0;font-family:"Segoe UI",Tahoma,Verdana,sans-serif}html{scroll-behavior:smooth}body{background:linear-gradient(180deg,#dce8f5 0%,#edf4fb 45%,#d7e6f6 100%);color:var(--text);line-height:1.5;background-attachment:fixed}a{text-decoration:none;color:inherit}
-.topbar{background:linear-gradient(90deg,#07111f,#0f766e,#7c3aed);color:#fff}.nav{width:min(var(--max),calc(100% - 32px));margin:auto;min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
-.logo{display:flex;align-items:center;gap:12px;font-weight:950}.logo-mark{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--yellow),#f97316);display:grid;place-items:center;color:#111;font-size:24px}.logo strong{display:block;font-size:24px;line-height:1}.logo span:last-child{display:block;color:#ffe37a;font-size:11px;letter-spacing:2px;text-transform:uppercase;margin-top:4px}
-.nav-links{display:flex;gap:10px;flex-wrap:wrap}.nav-links a{padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.1);color:#fff;font-weight:800;font-size:14px}.nav-links a:hover{background:#fff;color:#07111f}
-.hero-wrap{padding:28px 0 22px}.hero{width:min(var(--max),calc(100% - 32px));margin:auto;border-radius:32px;padding:44px 34px;background:radial-gradient(circle at top left,rgba(250,204,21,.26),transparent 28%),radial-gradient(circle at bottom right,rgba(6,182,212,.28),transparent 32%),linear-gradient(135deg,#081120,#12335c 55%,#0f766e);color:#fff;box-shadow:var(--shadow);display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
-.pill{display:inline-flex;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.20);padding:9px 14px;border-radius:999px;font-size:13px;font-weight:900;text-transform:uppercase}.hero h1{font-size:clamp(36px,5vw,62px);line-height:1.05;letter-spacing:-1.8px;margin:18px 0 14px}.hero p{font-size:18px;color:#e7f2ff;max-width:760px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.hero-panel{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);border-radius:24px;padding:22px;display:grid;gap:12px}.hero-panel h2{color:var(--yellow);font-size:24px}.hero-panel div{padding:12px 14px;border-radius:16px;background:rgba(255,255,255,.10);font-weight:850;color:#fff}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 16px;border-radius:14px;font-weight:950;transition:.22s;text-align:center;font-size:14px}a.btn:hover{transform:translateY(-2px)}.btn-yellow{background:var(--yellow);color:#111}.btn-cyan{background:var(--cyan);color:#fff}.btn-white{background:#fff;color:#07111f}
-.tools{width:min(var(--max),calc(100% - 32px));margin:18px auto 0;display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center}.search{width:100%;padding:16px 18px;border-radius:18px;border:2px solid #dbe7f3;background:#fff;box-shadow:0 8px 20px rgba(7,17,31,.06);font-weight:800;outline:none}.quick-links{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}.quick-links a{padding:12px 14px;border-radius:14px;background:#fff;color:#07111f;font-weight:900;box-shadow:0 8px 20px rgba(7,17,31,.06)}
-.section{width:min(var(--max),calc(100% - 32px));margin:34px auto;padding:34px 0}.section-head{margin-bottom:20px}.eyebrow{display:inline-flex;padding:8px 12px;border-radius:999px;background:#111827;color:#fff;font-weight:950;font-size:12px;text-transform:uppercase}.section h2{font-size:clamp(30px,4vw,46px);letter-spacing:-1px;margin:12px 0 6px;color:#07111f}.section-head p{color:var(--muted);font-size:17px;max-width:820px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.product-card{position:relative;overflow:hidden;border-radius:24px;padding:22px;min-height:300px;color:#fff;box-shadow:var(--shadow);display:flex;flex-direction:column;isolation:isolate}.product-card:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at top right,rgba(255,255,255,.24),transparent 35%);z-index:-1}.card-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:18px}.tag{background:rgba(255,255,255,.94);color:#111827;border-radius:999px;padding:7px 11px;font-weight:950;font-size:12px;text-transform:uppercase}.category{background:rgba(0,0,0,.18);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:7px 10px;font-weight:850;font-size:12px}.product-card h3{font-size:23px;line-height:1.12;margin-bottom:10px}.product-card p{color:rgba(255,255,255,.88);font-size:15px;flex:1}.price-row{margin:18px 0 14px;padding:13px 14px;border-radius:18px;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.13);display:flex;align-items:center;justify-content:space-between}.price-row span{font-size:12px;text-transform:uppercase;font-weight:900;color:rgba(255,255,255,.78)}.price-row strong{font-size:28px;color:#fff}.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px}.actions.one{grid-template-columns:1fr}.btn-light{background:rgba(255,255,255,.94);color:#111827}.btn-dark{background:#07111f;color:#fff;border:1px solid rgba(255,255,255,.16)}.btn-soon{background:rgba(255,255,255,.22);color:#fff;border:1px solid rgba(255,255,255,.22);cursor:default}
-.color-enem{background:linear-gradient(135deg,#0f766e,#2563eb)}.color-portugues{background:linear-gradient(135deg,#7c2d12,#db2777)}.color-literatura{background:linear-gradient(135deg,#581c87,#c026d3)}.color-ingles{background:linear-gradient(135deg,#1e3a8a,#0284c7)}.color-espanhol{background:linear-gradient(135deg,#7f1d1d,#f97316)}.color-artes{background:linear-gradient(135deg,#701a75,#e879f9)}.color-edfisica{background:linear-gradient(135deg,#166534,#22c55e)}.color-matematica{background:linear-gradient(135deg,#312e81,#8b5cf6)}.color-fisica{background:linear-gradient(135deg,#164e63,#06b6d4)}.color-quimica{background:linear-gradient(135deg,#78350f,#f59e0b)}.color-biologia{background:linear-gradient(135deg,#14532d,#10b981)}.color-historia{background:linear-gradient(135deg,#7c2d12,#ea580c)}.color-geografia{background:linear-gradient(135deg,#365314,#84cc16)}.color-filosofia{background:linear-gradient(135deg,#3b0764,#a855f7)}.color-sociologia{background:linear-gradient(135deg,#0c4a6e,#38bdf8)}.color-atualidades{background:linear-gradient(135deg,#3f6212,#ca8a04)}.color-revisao{background:linear-gradient(135deg,#115e59,#14b8a6)}.color-redacao{background:linear-gradient(135deg,#831843,#f43f5e)}.color-escola{background:linear-gradient(135deg,#1d4ed8,#7c3aed)}.color-sefaz{background:linear-gradient(135deg,#111827,#0f766e)}.color-tjce{background:linear-gradient(135deg,#1e1b4b,#2563eb)}.color-camara{background:linear-gradient(135deg,#0f172a,#7c3aed)}.color-administrativo{background:linear-gradient(135deg,#374151,#0891b2)}.color-inss{background:linear-gradient(135deg,#064e3b,#16a34a)}.color-bancaria{background:linear-gradient(135deg,#1e3a8a,#0f766e)}.color-transito{background:linear-gradient(135deg,#78350f,#eab308)}.color-copa{background:linear-gradient(135deg,#064e3b,#f59e0b)}.color-franquia{background:linear-gradient(135deg,#4c1d95,#db2777)}.color-elearning{background:linear-gradient(135deg,#0f172a,#6366f1)}.color-data{background:linear-gradient(135deg,#172554,#06b6d4)}.color-offshore{background:linear-gradient(135deg,#0c4a6e,#0284c7)}.color-enfermagem{background:linear-gradient(135deg,#7f1d1d,#ef4444)}
-.cta{width:min(var(--max),calc(100% - 32px));margin:34px auto 60px;border-radius:30px;padding:34px;background:linear-gradient(135deg,#07111f,#0f766e,#7c3aed);color:#fff;box-shadow:var(--shadow);text-align:center}.cta h2{font-size:34px;margin-bottom:10px}.cta p{color:#e8f4ff;font-size:17px;margin-bottom:20px}footer{background:#07111f;color:#fff;text-align:center;padding:36px 16px}footer p{color:#b8c7dc;margin-top:8px}.hidden{display:none!important}
-@media(max-width:980px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}.tools{grid-template-columns:1fr}.quick-links{justify-content:flex-start}}
-@media(max-width:680px){.nav{padding:12px 0}.nav-links{width:100%;justify-content:center}.hero{padding:28px 20px;border-radius:24px}.grid{grid-template-columns:1fr}.actions{grid-template-columns:1fr}.product-card{min-height:auto}}
-</style></head><body>
-<header class="topbar"><div class="nav"><a class="logo" href="#top"><span class="logo-mark">✓</span><span><strong>Gabarito Max</strong><span>Simulados Digitais</span></span></a><nav class="nav-links"><a href="#ensino">Ensino</a><a href="#concursos">Concursos</a><a href="#profissoes">Profissões</a></nav></div></header>
-<main id="top"><section class="hero-wrap"><div class="hero"><div><span class="pill">Portal oficial de simulados digitais</span><h1>Escolha seu simulado por área e comece a treinar.</h1><p>Produtos organizados para ENEM, concursos e profissões, com acesso rápido ao teste grátis e à versão premium.</p><div class="hero-actions"><a class="btn btn-yellow" href="#ensino">Ver Ensino</a><a class="btn btn-cyan" href="#concursos">Ver Concursos</a><a class="btn btn-white" href="#profissoes">Ver Profissões</a></div></div><div class="hero-panel"><h2>Catálogo atualizado</h2><div>✅ DB ENEM por disciplina: R$ 19,90</div><div>✅ Redação ENEM Premium: R$ 29,90</div><div>✅ DB ENEM Vitalício: R$ 99,00</div><div>✅ Testes grátis: 2 a 5 pacotes • Premium: 20 pacotes</div></div></div><div class="tools"><input id="searchInput" class="search" type="search" placeholder="Buscar simulado, área ou disciplina..."><div class="quick-links"><a href="#ensino">DB ENEM</a><a href="#concursos">TJ CE / SEFAZ</a><a href="#profissoes">Carreiras</a></div></div></section>
-<section class="section" id="ensino"><div class="section-head"><span class="eyebrow">Área 1</span><h2>Ensino e DB ENEM</h2><p>Simulados escolares, ENEM e produtos digitais por disciplina.</p></div><div class="grid"><article class="product-card color-enem" data-search="ensino e db enem db enem db enem vitalício acesso completo aos 17 simulados digitais enem em uma única compra.">
-<div class="card-top"><span class="tag">Vitalício</span><span class="category">DB ENEM</span></div>
-<h3>DB ENEM Vitalício</h3><p>Acesso completo aos 17 simulados digitais ENEM em uma única compra.</p>
-<div class="price-row"><span>Valor</span><strong>R$ 99,00</strong></div><div class="actions one"><a class="btn btn-dark" href="https://pay.kiwify.com.br/ai09spZ" target="_blank" rel="noopener">Acessar Premium</a></div>
-</article><article class="product-card color-redacao" data-search="ensino e db enem db enem redação enem premium treino de redação com estrutura, repertório, conclusão e temas modelo.">
-<div class="card-top"><span class="tag">Redação</span><span class="category">DB ENEM</span></div>
-<h3>Redação ENEM Premium</h3><p>Treino de redação com estrutura, repertório, conclusão e temas modelo.</p>
-<div class="price-row"><span>Valor</span><strong>R$ 29,90</strong></div><div class="actions"><a class="btn btn-light" href="https://cincoregioes-star.github.io/reda-o-teste/?origem=portal_gabarito_max" target="_blank" rel="noopener">Teste grátis</a><a class="btn btn-dark" href="https://pay.kiwify.com.br/NsDMCx9" target="_blank" rel="noopener">Premium</a></div>
-</article><article class="product-card color-revisao" data-search="ensino e db enem db enem revisão final enem premium revisão rápida com questões selecionadas para reta final.">
-<div class="card-top"><span class="tag">Revisão</span><span class="category">DB ENEM</span></div>
-<h3>Revisão Final ENEM Premium</h3><p>Revisão rápida com questões selecionadas para reta final.</p>
-<div class="price-row"><span>Valor</span><strong>R$ 9,90</strong></div><div class="actions"><a class="btn btn-light" href="https://cincoregioes-star.github.io/revisao-final-enem-teste/?origem=portal_gabarito_max" target="_blank" rel="noopener">Teste grátis</a><a class="btn btn-dark" href="https://pay.kiwify.com.br/A20iS8u" target="_blank" rel="noopener">Premium</a></div>
-</article><article class="product-card color-atualidades" data-search="ensino e db enem db enem atualidades enem premium temas recentes conectados às competências do enem.">
-<div class="card-top"><span class="tag">Premium</span><span class="category">DB ENEM</span></div>
-<h3>Atualidades ENEM Premium</h3><p>Temas recentes conectados às competências do ENEM.</p>
-<div class="price-row"><span>Valor</span><strong>R$ 19,90</strong></div><div class="actions"><a class="btn btn-light" href="https://cincoregioes-star.github.io/atualidades-teste/?origem=portal_gabarito_max" target="_blank" rel="noopener">Teste grátis</a><a class="btn btn-dark" href="https://pay.kiwify.com.br/4yauUSB" target="_blank" rel="noopener">Premium</a></div>
-</article><article class="product-card color-sociologia" data-search="ensino e db enem db enem sociologia enem premium cultura, trabalho, desigualdade, cidadania e movimentos sociais.">
-<div class="card-top"><span class="tag">Premium</span><span class="category">DB ENEM</span></div>
-<h3>Sociologia ENEM Premium</h3><p>Cultura, trabalho, desigualdade, cidadania e movimentos sociais.</p>
-<div class="price-row"><span>Valor</span><strong>R$ 19,90</strong></div><div class="actions"><a class="btn btn-light" href="https://cincoregioes-star.github.io/sociologia-teste/?origem=portal_gabarito_max" target="_blank" rel="noopener">Teste grátis</a><a class="btn btn-dark" href="https://pay.kiwify.com.br/cVUqErx" target="_blank" rel="noopener">Premium</a></div>
-</article><article class="product-card color-matematica" data-search="ensino e db enem db enem matemática enem premium questões objetivas de matemática aplicada no padrão enem.">
-<div class="card-top"><span class="tag">Premium</span><span class="category">DB ENEM</span></div>
-<h3>Matemática ENEM Premium</h3><p>Questões objetivas de matemática aplicada no padrão ENEM.</p>
-<div class="price-row"><span>Valor</span><strong>R$ 19,90</strong></div><div class="actions"><a class="btn btn-light" href="https://cincoregioes-star.github.io/matematica-teste/?origem=portal_gabarito_max" target="_blank" rel="noopener">Teste grátis</a><a class="btn btn-dark" href="https://pay.kiwify.com.br/SKiUUvs" target="_blank" rel="noopener">Premium</a></div>
-</article><article class="product-card color-fisica" data-search="ensino e db enem db enem física enem premium energia, mecânica, eletricidade, ondas e interpretação de problemas.">
-<div class="card-top"><span class="tag">Premium</span><span class="category">DB ENEM</span></div>
-<h3>Física ENEM Premium</h3><p>Energia, mecânica, eletricidade, ondas e interpretação de problemas.</p>
-<div class="price-row"><span>Valor</span><strong>R$ 19,90</strong></div><div class="actions"><a class="btn btn-light" href="https://cincoregioes-star.github.io/fisica-teste/?origem=portal_gabarito_max" target="_blank" rel="noopener">Teste grátis</a><a class="btn btn-dark" href="https://pay.kiwify.com.br/qTTx3pO" target="_blank" rel="noopener">Premium</a></div>
-</article><article class="product-card color-quimica" data-search="ensino e db enem db enem química enem premium química geral, orgânica, ambiental e interpretação de gráficos.">
-<div class="card-top"><span class="tag">Premium</span><span class="category">DB ENEM</span></div>
-<h3>Química ENEM Premium</h3><p>Química geral, orgânica, ambiental e interpretação de gráficos.</p>
-<div class="price-row"><span>Valor</span><strong>R$ 19,90</strong></div><div class="actions"><a class="btn btn-light" href="https://cincoregioes-star.github.io/quimica-teste/?origem=portal_gabarito_max" target="_blank" rel="noopener">Teste grátis</a><a class="btn btn-dark" href="https://pay.kiwify.com.br/KRVxuLb" target="_blank" rel="noopener">Premium</a></div>
-</article><article class="product-card color-biologia" data-search="ensino e db enem db enem biologia enem premium ecologia, genética, fisiologia, evolução e saúde pública.">
-<div class="card-top"><span class="tag">Premium</span><span class="category">DB ENEM</span></div>
-<h3>Biologia ENEM Premium</h3><p>Ecologia, genética, fisiologia, evolução e saúde pública.</p>
-<div class="price-row"><span>Valor</span><strong>R$ 19,90</strong></div><div class="actions"><a class="btn btn-light" href="https://cincoregioes-star.github.io/biologia-teste/?origem=portal_gabarito_max" target="_blank" rel="noopener">Teste grátis</a><a class="btn btn-dark" href="https://pay.kiwify.com.br/RGfxyUn" target="_blank" rel="noopener">Premium</a></div>
-</article><article class="product-card color-filosofia" data-search="ensino e db enem db enem filosofia enem premium pensadores, ética, política, conhecimento e sociedade.">
-<div class="card-top"><span class="tag">Premium</span><span class="category">DB ENEM</span></div>
-<h3>Filosofia ENEM Premium</h3><p>Pensadores, ética, política, conhecimento e sociedade.</p>
-<div class="price-row"><span>Valor</span><strong>R$ 19,90</strong></div><div class="actions"><a class="btn btn-light" href="https://cincoregioes-star.github.io/filosofia-teste/?origem=portal_gabarito_max" target="_blank" rel="noopener">Teste grátis</a><a class="btn btn-dark" href="https://pay.kiwify.com.br/B6iF4hA" target="_blank" rel="noopener">Premium</a></div>
-</article><article class="product-card color-historia" data-search="ensino e db enem db enem história enem premium brasil, mundo contemporâneo, cidadania e interpretação histórica.">
-<div class="card-top"><span class="tag">Premium</span><span class="category">DB ENEM</span></div>
-<h3>História ENEM Premium</h3><p>Brasil, mundo contemporâneo, cidadania e interpretação histórica.</p>
-<div class="price-row"><span>Valor</span><strong>R$ 19,90</strong></div><div class="actions"><a class="btn btn-light" href="https://cincoregioes-star.github.io/historia-teste/?origem=portal_gabarito_max" target="_blank" rel="noopener">Teste grátis</a><a class="btn btn-dark" href="https://pay.kiwify.com.br/h8GJzVE" target="_blank" rel="noopener">Premium</a></div>
-</article><article class="product-card color-geografia" data-search="ensino e db enem db enem geografia enem premium geopolítica, urbanização, clima, cartografia e atualidades.">
-<div class="card-top"><span class="tag">Premium</span><span class="category">DB ENEM</span></div>
-<h3>Geografia ENEM Premium</h3><p>Geopolítica, urbanização, clima, cartografia e atualidades.</p>
-<div class="price-row"><span>Valor</span><strong>R$ 19,90</strong></div><div class="actions"><a class="btn btn-light" href="https://cincoregioes-star.github.io/geografia-teste/?origem=portal_gabarito_max" target="_blank" rel="noopener">Teste grátis</a><a class="btn btn-dark" href="https://pay.kiwify.com.br/64GnsBH" target="_blank" rel="noopener">Premium</a></div>
-</article><article class="product-card color-portugues" data-search="ensino e db enem db enem português enem premium simulado por disciplina com questões digitais e revisão objetiva.">
-<div class="card-top"><span class="tag">Premium</span><span class="category">DB ENEM</span></div>
-<h3>Português ENEM Premium</h3><p>Simulado por disciplina com questões digitais e revisão objetiva.</p>
-<div class="price-row"><span>Valor</span><strong>R$ 19,90</strong></div><div class="actions"><a class="btn btn-light" href="https://cincoregioes-star.github.io/portugues-teste/?origem=portal_gabarito_max" target="_blank" rel="noopener">Teste grátis</a><a class="btn btn-dark" href="https://pay.kiwify.com.br/QxRaDJy" target="_blank" rel="noopener">Premium</a></div>
-</article><article class="product-card color-literatura" data-search="ensino e db enem db enem literatura enem premium treino focado em escolas literárias, interpretação e autores cobrados.">
-<div class="card-top"><span class="tag">Premium</span><span class="category">DB ENEM</span></div>
-<h3>Literatura ENEM Premium</h3><p>Treino focado em escolas literárias, interpretação e autores cobrados.</p>
-<div class="price-row"><span>Valor</span><strong>R$ 19,90</strong></div><div class="actions"><a class="btn btn-light" href="https://cincoregioes-star.github.io/literatura-teste/?origem=portal_gabarito_max" target="_blank" rel="noopener">Teste grátis</a><a class="btn btn-dark" href="https://pay.kiwify.com.br/plt5Mut" target="_blank" rel="noopener">Premium</a></div>
-</article><article class="product-card color-ingles" data-search="ensino e db enem db enem inglês enem premium leitura, vocabulário, interpretação e estratégias para prova.">
-<div class="card-top"><span class="tag">Premium</span><span class="category">DB ENEM</span></div>
-<h3>Inglês ENEM Premium</h3><p>Leitura, vocabulário, interpretação e estratégias para prova.</p>
-<div class="price-row"><span>Valor</span><strong>R$ 19,90</strong></div><div class="actions"><a class="btn btn-light" href="https://cincoregioes-star.github.io/ingles-teste/?origem=portal_gabarito_max" target="_blank" rel="noopener">Teste grátis</a><a class="btn btn-dark" href="https://pay.kiwify.com.br/Z1n4Xve" target="_blank" rel="noopener">Premium</a></div>
-</article><article class="product-card color-espanhol" data-search="ensino e db enem db enem espanhol enem premium simulado de língua espanhola com foco em interpretação textual.">
-<div class="card-top"><span class="tag">Premium</span><span class="category">DB ENEM</span></div>
-<h3>Espanhol ENEM Premium</h3><p>Simulado de língua espanhola com foco em interpretação textual.</p>
-<div class="price-row"><span>Valor</span><strong>R$ 19,90</strong></div><div class="actions"><a class="btn btn-light" href="https://cincoregioes-star.github.io/espanhol-teste/?origem=portal_gabarito_max" target="_blank" rel="noopener">Teste grátis</a><a class="btn btn-dark" href="https://pay.kiwify.com.br/THSH11k" target="_blank" rel="noopener">Premium</a></div>
-</article><article class="product-card color-artes" data-search="ensino e db enem db enem artes enem premium arte, cultura, linguagem visual e movimentos artísticos.">
-<div class="card-top"><span class="tag">Premium</span><span class="category">DB ENEM</span></div>
-<h3>Artes ENEM Premium</h3><p>Arte, cultura, linguagem visual e movimentos artísticos.</p>
-<div class="price-row"><span>Valor</span><strong>R$ 19,90</strong></div><div class="actions"><a class="btn btn-light" href="https://cincoregioes-star.github.io/artes-teste/?origem=portal_gabarito_max" target="_blank" rel="noopener">Teste grátis</a><a class="btn btn-dark" href="https://pay.kiwify.com.br/uHVp2Hl" target="_blank" rel="noopener">Premium</a></div>
-</article><article class="product-card color-edfisica" data-search="ensino e db enem db enem educação física enem premium saúde, corpo, esporte, cultura corporal e qualidade de vida.">
-<div class="card-top"><span class="tag">Premium</span><span class="category">DB ENEM</span></div>
-<h3>Educação Física ENEM Premium</h3><p>Saúde, corpo, esporte, cultura corporal e qualidade de vida.</p>
-<div class="price-row"><span>Valor</span><strong>R$ 19,90</strong></div><div class="actions"><a class="btn btn-light" href="https://cincoregioes-star.github.io/ed-fisica-teste/?origem=portal_gabarito_max" target="_blank" rel="noopener">Teste grátis</a><a class="btn btn-dark" href="https://pay.kiwify.com.br/TOIMG48" target="_blank" rel="noopener">Premium</a></div>
-</article><article class="product-card color-enem" data-search="ensino e db enem gabarito max simulado enem 2026 produto completo para treino geral enem com simulados digitais">
-<div class="card-top"><span class="tag">Completo</span><span class="category">Gabarito Max</span></div>
-<h3>Simulado ENEM 2026 — Gabarito Max</h3><p>Produto completo para treino geral ENEM com simulados digitais. Teste grátis libera pacotes e premium libera 20 pacotes.</p>
-<div class="price-row"><span>Valor</span><strong>R$ 49,90</strong></div><div class="actions"><a class="btn btn-light" href="https://cincoregioes-star.github.io/teste-enem-2026/" target="_blank" rel="noopener">Teste grátis</a><a class="btn btn-dark" href="https://pay.kiwify.com.br/YPRutfT" target="_blank" rel="noopener">Premium</a></div>
-</article><article class="product-card color-escola" data-search="ensino e db enem ensino fundamental gabarito max 9º ano — revisão interativa revisão escolar interativa para estudantes do 9º ano.">
-<div class="card-top"><span class="tag">Escola</span><span class="category">Ensino Fundamental</span></div>
-<h3>Gabarito Max 9º Ano — Revisão Interativa</h3><p>Revisão escolar interativa para estudantes do 9º ano.</p>
-<div class="price-row"><span>Valor</span><strong>R$ 20,00</strong></div><div class="actions"><a class="btn btn-light" href="https://cincoregioes-star.github.io/gabarito-max-9ano/?origem=portal_gabarito_max" target="_blank" rel="noopener">Teste grátis</a><a class="btn btn-dark" href="https://pay.kiwify.com.br/neZ2oHx" target="_blank" rel="noopener">Premium</a></div>
-</article><article class="product-card color-escola" data-search="ensino e db enem ensino médio gabarito max — revisão nacional 1º ano estrutura ampla de revisão para estudantes do 1º ano do ensino médio.">
-<div class="card-top"><span class="tag">Em preparação</span><span class="category">Ensino Médio</span></div>
-<h3>Gabarito Max — Revisão Nacional 1º Ano</h3><p>Estrutura ampla de revisão para estudantes do 1º ano do ensino médio.</p>
-<div class="price-row"><span>Valor</span><strong>R$ 37,90</strong></div><div class="actions one"><span class="btn btn-soon">Produto em preparação</span></div>
-</article><article class="product-card color-escola" data-search="ensino e db enem ensino médio gabarito max — revisão gamificada 1º ano revisão com experiência leve, visual e gamificada.">
-<div class="card-top"><span class="tag">Em preparação</span><span class="category">Ensino Médio</span></div>
-<h3>Gabarito Max — Revisão Gamificada 1º Ano</h3><p>Revisão com experiência leve, visual e gamificada.</p>
-<div class="price-row"><span>Valor</span><strong>R$ 20,00</strong></div><div class="actions one"><span class="btn btn-soon">Produto em preparação</span></div>
-</article></div></section><section class="section" id="concursos"><div class="section-head"><span class="eyebrow">Área 2</span><h2>Concursos</h2><p>Treinos digitais para concursos municipais, estaduais e áreas administrativas.</p></div><div class="grid"><article class="product-card color-sefaz" data-search="concursos concurso estadual sefaz ce 2026 — auditor-fiscal premium fcc com 13 módulos, 260 questões comentadas e treino discursivo.">
-<div class="card-top"><span class="tag">Novo</span><span class="category">Concurso Estadual</span></div>
-<h3>SEFAZ CE 2026 — Auditor-Fiscal</h3><p>Premium FCC com 13 módulos, 260 questões comentadas, treino discursivo e 20 pacotes no álbum.</p>
-<div class="price-row"><span>Valor</span><strong>R$ 39,90</strong></div><div class="actions"><a class="btn btn-light" href="https://cincoregioes-star.github.io/sefaz-teste/" target="_blank" rel="noopener">Teste grátis</a><a class="btn btn-dark" href="https://pay.kiwify.com.br/A9KsBsk" target="_blank" rel="noopener">Premium</a></div>
-</article><article class="product-card color-tjce" data-search="concursos concurso estadual tj ce 2026 — técnico/analista judiciário simulado no estilo fcc com módulos por disciplina e treinamento premium.">
-<div class="card-top"><span class="tag">Novo</span><span class="category">Concurso Estadual</span></div>
-<h3>TJ CE 2026 — Técnico/Analista Judiciário</h3><p>Simulado no estilo FCC com teste grátis valendo pacotes e premium com 20 pacotes.</p>
-<div class="price-row"><span>Valor</span><strong>R$ 19,90</strong></div><div class="actions"><a class="btn btn-light" href="https://cincoregioes-star.github.io/tjce-teste/" target="_blank" rel="noopener">Teste grátis</a><a class="btn btn-dark" href="https://pay.kiwify.com.br/ut2sHA7" target="_blank" rel="noopener">Premium</a></div>
-</article><article class="product-card color-camara" data-search="concursos concurso municipal câmara de beberibe — analista administrativo simulado direcionado para área administrativa municipal.">
-<div class="card-top"><span class="tag">Municipal</span><span class="category">Concurso Municipal</span></div>
-<h3>Câmara de Beberibe — Analista Administrativo</h3><p>Simulado direcionado para área administrativa municipal.</p>
-<div class="price-row"><span>Valor</span><strong>R$ 19,90</strong></div><div class="actions"><a class="btn btn-light" href="https://cincoregioes-star.github.io/simulado-analista-adm-isca/?origem=portal_gabarito_max" target="_blank" rel="noopener">Teste grátis</a><a class="btn btn-dark" href="https://pay.kiwify.com.br/AMEiNRc" target="_blank" rel="noopener">Premium</a></div>
-</article><article class="product-card color-administrativo" data-search="concursos concurso administrativo concurso analista administrativo treinamento para cargos administrativos em prefeituras, câmaras e órgãos públicos.">
-<div class="card-top"><span class="tag">Administrativo</span><span class="category">Concurso Administrativo</span></div>
-<h3>Concurso Analista Administrativo</h3><p>Treinamento para cargos administrativos em prefeituras, câmaras e órgãos públicos.</p>
-<div class="price-row"><span>Valor</span><strong>R$ 29,90</strong></div><div class="actions"><a class="btn btn-light" href="https://cincoregioes-star.github.io/simulado-analista-adm-isca/?origem=portal_gabarito_max" target="_blank" rel="noopener">Teste grátis</a><a class="btn btn-dark" href="https://pay.kiwify.com.br/AMEiNRc" target="_blank" rel="noopener">Premium</a></div>
-</article><article class="product-card color-inss" data-search="concursos concurso previdenciário gabarito max inss — área premium simulado para revisão de conhecimentos cobrados em concursos previdenciários.">
-<div class="card-top"><span class="tag">INSS</span><span class="category">Concurso Previdenciário</span></div>
-<h3>Gabarito Max INSS — Área Premium</h3><p>Simulado para revisão de conhecimentos cobrados em concursos previdenciários.</p>
-<div class="price-row"><span>Valor</span><strong>R$ 29,90</strong></div><div class="actions"><a class="btn btn-light" href="https://cincoregioes-star.github.io/simuladomax-inss-gratis/?origem=portal_gabarito_max" target="_blank" rel="noopener">Teste grátis</a><a class="btn btn-dark" href="https://pay.kiwify.com.br/PTaBuUI" target="_blank" rel="noopener">Premium</a></div>
-</article><article class="product-card color-bancaria" data-search="concursos concurso bancário gabarito max bancárias — premium simulado para bancos, atendimento, matemática e conhecimentos bancários.">
-<div class="card-top"><span class="tag">Bancárias</span><span class="category">Concurso Bancário</span></div>
-<h3>Gabarito Max Bancárias — Premium</h3><p>Simulado para bancos, atendimento, matemática e conhecimentos bancários.</p>
-<div class="price-row"><span>Valor</span><strong>R$ 37,90</strong></div><div class="actions"><a class="btn btn-light" href="https://cincoregioes-star.github.io/gabarito-max-bancarias/?origem=portal_gabarito_max" target="_blank" rel="noopener">Teste grátis</a><a class="btn btn-dark" href="https://kiwify.app/A4s1RsQ" target="_blank" rel="noopener">Premium</a></div>
-</article><article class="product-card color-transito" data-search="concursos concurso municipal gabarito max — morada nova agente de trânsito treinamento digital para cargo de agente de trânsito.">
-<div class="card-top"><span class="tag">Trânsito</span><span class="category">Concurso Municipal</span></div>
-<h3>Gabarito Max — Morada Nova Agente de Trânsito</h3><p>Treinamento digital para cargo de agente de trânsito.</p>
-<div class="price-row"><span>Valor</span><strong>R$ 19,90</strong></div><div class="actions"><a class="btn btn-light" href="https://cincoregioes-star.github.io/gabarito-max-moradanova_teste/?origem=portal_gabarito_max" target="_blank" rel="noopener">Teste grátis</a><a class="btn btn-dark" href="https://pay.kiwify.com.br/Xl9jnTb" target="_blank" rel="noopener">Premium</a></div>
-</article><article class="product-card color-copa" data-search="concursos copa e atualidades gabarito max — simulado copa do mundo premium simulado temático com questões de atualidades, geografia, história e copa 2026.">
-<div class="card-top"><span class="tag">Copa 2026</span><span class="category">Copa e Atualidades</span></div>
-<h3>Gabarito Max — Simulado Copa do Mundo Premium</h3><p>Simulado temático com questões de atualidades, geografia, história e Copa 2026.</p>
-<div class="price-row"><span>Valor</span><strong>R$ 14,99</strong></div><div class="actions"><a class="btn btn-light" href="https://cincoregioes-star.github.io/-simulado-copa-isca/?origem=portal_gabarito_max" target="_blank" rel="noopener">Teste grátis</a><a class="btn btn-dark" href="https://pay.kiwify.com.br/8rMJ1I1" target="_blank" rel="noopener">Premium</a></div>
-</article></div></section><section class="section" id="profissoes"><div class="section-head"><span class="eyebrow">Área 3</span><h2>Profissões</h2><p>Simuladores para carreira, certificações e qualificação profissional.</p></div><div class="grid"><article class="product-card color-elearning" data-search="profissões educação digital gabarito max — especialista em e-learning &amp; di simulado profissional para design instrucional, ead e produção educacional.">
-<div class="card-top"><span class="tag">Carreira</span><span class="category">Educação Digital</span></div>
-<h3>Gabarito Max — Especialista em E-learning &amp; DI</h3><p>Simulado profissional para design instrucional, EAD e produção educacional.</p>
-<div class="price-row"><span>Valor</span><strong>R$ 39,90</strong></div><div class="actions one"><a class="btn btn-dark" href="https://pay.kiwify.com.br/ZdGjxyf" target="_blank" rel="noopener">Acessar Premium</a></div>
-</article><article class="product-card color-offshore" data-search="profissões marítimo e offshore simulador gabarito max — marítimo &amp; offshore simulado profissional para área marítima, offshore e segurança operacional.">
-<div class="card-top"><span class="tag">Offshore</span><span class="category">Marítimo e Offshore</span></div>
-<h3>Simulador Gabarito Max — Marítimo &amp; Offshore</h3><p>Simulado profissional para área marítima, offshore e segurança operacional.</p>
-<div class="price-row"><span>Valor</span><strong>R$ 37,90</strong></div><div class="actions one"><a class="btn btn-dark" href="https://pay.kiwify.com.br/2mO8t57" target="_blank" rel="noopener">Acessar Premium</a></div>
-</article><article class="product-card color-enfermagem" data-search="profissões saúde simulador gabarito max — técnico em enfermagem treino para técnico em enfermagem com foco em prática, ética e legislação.">
-<div class="card-top"><span class="tag">Saúde</span><span class="category">Saúde</span></div>
-<h3>Simulador Gabarito Max — Técnico em Enfermagem</h3><p>Treino para técnico em enfermagem com foco em prática, ética e legislação.</p>
-<div class="price-row"><span>Valor</span><strong>R$ 47,90</strong></div><div class="actions one"><a class="btn btn-dark" href="https://pay.kiwify.com.br/DCdcdmJ" target="_blank" rel="noopener">Acessar Premium</a></div>
-</article><article class="product-card color-franquia" data-search="profissões certificação simulador profissional de franquia — certificação padrão treinamento para qualificação e avaliação de conhecimentos sobre franquias.">
-<div class="card-top"><span class="tag">Em preparação</span><span class="category">Certificação</span></div>
-<h3>Simulador Profissional de Franquia — Certificação Padrão</h3><p>Treinamento para qualificação e avaliação de conhecimentos sobre franquias.</p>
-<div class="price-row"><span>Valor</span><strong>R$ 19,90</strong></div><div class="actions one"><span class="btn btn-soon">Produto em preparação</span></div>
-</article><article class="product-card color-data" data-search="profissões tecnologia data &amp; ai interview pro — alta performance preparação para entrevistas de dados, ia e tecnologia.">
-<div class="card-top"><span class="tag">Em preparação</span><span class="category">Tecnologia</span></div>
-<h3>Data &amp; AI Interview Pro — Alta Performance</h3><p>Preparação para entrevistas de dados, IA e tecnologia.</p>
-<div class="price-row"><span>Valor</span><strong>R$ 67,00</strong></div><div class="actions one"><span class="btn btn-soon">Produto em preparação</span></div>
-</article></div></section><section class="cta"><h2>Simulados digitais para estudar com mais foco</h2><p>Escolha um produto, faça o teste grátis e avance para o premium quando estiver pronto.</p><a class="btn btn-yellow" href="#ensino">Ver catálogo completo</a></section></main>
-<footer><strong>Gabarito Max</strong><p>Portal de simulados digitais para ENEM, concursos e profissões.</p></footer>
-<script>const searchInput=document.getElementById("searchInput");const cards=Array.from(document.querySelectorAll(".product-card"));searchInput.addEventListener("input",function(){const term=this.value.toLowerCase().trim();cards.forEach(card=>{const text=card.dataset.search+" "+card.textContent.toLowerCase();card.classList.toggle("hidden",term&&!text.includes(term));});});</script>
-</body></html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gabarito Max | Simulados Digitais</title>
+  <meta name="description" content="Gabarito Max: portal de simulados digitais para ENEM, concursos, profissões e produtos educacionais premium." />
+  <style>
+    :root {
+      --bg:#05080f;
+      --bg2:#07121f;
+      --card:rgba(255,255,255,.075);
+      --card2:rgba(255,255,255,.12);
+      --line:rgba(255,255,255,.14);
+      --text:#f5f7fb;
+      --muted:#b7c3d8;
+      --green:#38f2a6;
+      --blue:#42b7ff;
+      --gold:#ffd36a;
+      --pink:#ff4fd8;
+      --purple:#a78bfa;
+      --red:#ff5f73;
+      --shadow:0 24px 80px rgba(0,0,0,.38);
+      --radius:28px;
+      --max:1180px;
+    }
+
+    * {box-sizing:border-box;margin:0;padding:0}
+    html {scroll-behavior:smooth}
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        linear-gradient(rgba(255,255,255,.028) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.028) 1px, transparent 1px),
+        radial-gradient(circle at 12% 8%, rgba(56,242,166,.18), transparent 26%),
+        radial-gradient(circle at 86% 12%, rgba(66,183,255,.16), transparent 26%),
+        radial-gradient(circle at 50% 80%, rgba(255,79,216,.11), transparent 30%),
+        linear-gradient(180deg,#05080f 0%,#07121f 44%,#05080f 100%);
+      background-size: 48px 48px, 48px 48px, auto, auto, auto, auto;
+      color:var(--text);
+      overflow-x:hidden;
+    }
+    a {color:inherit;text-decoration:none}
+    .container {width:min(var(--max),calc(100% - 32px));margin:0 auto}
+
+    .ticker {background:#020509;border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap}
+    .ticker-track {display:inline-flex;gap:42px;padding:13px 0;animation:ticker 28s linear infinite;color:#d9e7f7;font-weight:900;letter-spacing:.03em}
+    .ticker-track span {color:var(--gold)}
+    @keyframes ticker {from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+    header {position:sticky;top:0;z-index:50;backdrop-filter:blur(18px);background:rgba(5,8,15,.78);border-bottom:1px solid var(--line)}
+    .nav {height:78px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand {display:flex;align-items:center;gap:13px;font-weight:950;letter-spacing:-.03em}
+    .brand-mark {width:48px;height:48px;border-radius:17px;display:grid;place-items:center;background:linear-gradient(135deg,var(--gold),#ff8a00);color:#05080f;font-size:28px;box-shadow:0 0 42px rgba(255,211,106,.28)}
+    .brand small {display:block;color:var(--muted);font-size:11px;letter-spacing:.24em;text-transform:uppercase;margin-top:2px}
+    .brand strong {font-size:22px}
+    .brand strong em {color:var(--gold);font-style:normal}
+    .nav-links {display:flex;align-items:center;gap:16px;color:var(--muted);font-size:14px;font-weight:800}
+    .nav-links a:hover {color:var(--gold)}
+
+    .btn {display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;border-radius:999px;padding:13px 18px;font-weight:950;cursor:pointer;transition:.25s ease;text-align:center;font-size:14px}
+    .btn:hover {transform:translateY(-2px);filter:brightness(1.08)}
+    .btn-primary {background:linear-gradient(135deg,var(--gold),#ff8a00);color:#07111f;box-shadow:0 18px 48px rgba(255,211,106,.18)}
+    .btn-ghost {background:rgba(255,255,255,.08);color:var(--text);border:1px solid var(--line)}
+    .btn-muted {background:rgba(255,255,255,.12);color:var(--muted);border:1px solid var(--line);cursor:default}
+    .btn-muted:hover {transform:none;filter:none}
+
+    .hero {min-height:calc(100vh - 124px);display:grid;align-items:center;padding:70px 0 48px;position:relative}
+    .hero-grid {display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center}
+    .eyebrow {display:inline-flex;align-items:center;gap:10px;color:var(--gold);background:rgba(255,211,106,.09);border:1px solid rgba(255,211,106,.26);padding:9px 14px;border-radius:999px;font-weight:950;font-size:12px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:20px}
+    h1 {font-size:clamp(48px,8vw,104px);line-height:.9;letter-spacing:-.075em;margin-bottom:22px;text-transform:uppercase}
+    .gradient-text {background:linear-gradient(135deg,#fff,var(--gold),var(--blue),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .subtitle {font-size:clamp(18px,2vw,24px);color:#d8e5f7;line-height:1.45;max-width:780px;font-weight:800;margin-bottom:18px}
+    .definition {color:var(--muted);font-size:16px;line-height:1.75;max-width:780px;margin-bottom:28px}
+    .hero-actions {display:flex;flex-wrap:wrap;gap:12px;margin-bottom:26px}
+    .hero-stats {display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:860px}
+    .stat {border:1px solid var(--line);background:rgba(255,255,255,.065);border-radius:20px;padding:17px}
+    .stat strong {display:block;font-size:26px;color:var(--gold);margin-bottom:4px}
+    .stat span {color:var(--muted);font-size:13px;line-height:1.35;font-weight:800}
+
+    .hero-panel {border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.11),rgba(255,255,255,.045));border-radius:34px;padding:20px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+    .hero-panel::before {content:"";position:absolute;width:320px;height:320px;background:rgba(255,211,106,.13);filter:blur(36px);border-radius:50%;right:-120px;top:-120px}
+    .browser {position:relative;border-radius:24px;overflow:hidden;border:1px solid rgba(255,255,255,.16);background:#07111d;min-height:500px}
+    .browser-top {height:46px;display:flex;align-items:center;gap:8px;padding:0 15px;background:rgba(255,255,255,.08);border-bottom:1px solid var(--line)}
+    .dot {width:10px;height:10px;border-radius:50%;background:var(--red)} .dot:nth-child(2){background:var(--gold)} .dot:nth-child(3){background:var(--green)}
+    .browser-body {padding:22px}
+    .dash-title {display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px}
+    .dash-title h2 {font-size:27px;letter-spacing:-.04em}
+    .pill {padding:8px 11px;border-radius:999px;background:rgba(56,242,166,.12);border:1px solid rgba(56,242,166,.28);color:var(--green);font-size:12px;font-weight:950}
+    .mini-grid {display:grid;grid-template-columns:repeat(2,1fr);gap:13px;margin-bottom:16px}
+    .mini-card {padding:17px;border-radius:20px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12)}
+    .mini-card b {display:block;font-size:24px;margin-bottom:5px;color:#fff}
+    .mini-card small {color:var(--muted);font-weight:800}
+    .flow {margin-top:18px;display:grid;gap:12px}
+    .flow-row {display:grid;grid-template-columns:126px 1fr;gap:12px;align-items:center;color:var(--muted);font-size:13px;font-weight:900}
+    .bar {height:12px;border-radius:999px;background:rgba(255,255,255,.09);overflow:hidden}
+    .bar i {display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,var(--gold),var(--pink),var(--blue));width:var(--w)}
+
+    .search-zone {padding:26px 0 6px}
+    .search-panel {display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;border:1px solid var(--line);background:rgba(255,255,255,.065);border-radius:26px;padding:14px;box-shadow:0 16px 44px rgba(0,0,0,.18)}
+    .search-panel input {width:100%;border:1px solid rgba(255,255,255,.12);background:rgba(0,0,0,.22);color:#fff;border-radius:18px;padding:16px 18px;outline:none;font-size:15px;font-weight:800}
+    .search-panel input::placeholder {color:#8fa0ba}
+    .filters {display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+    .filter {border:1px solid var(--line);background:rgba(255,255,255,.08);color:var(--text);border-radius:999px;padding:12px 14px;font-weight:950;cursor:pointer}
+    .filter.active {background:linear-gradient(135deg,var(--gold),#ff8a00);color:#07111f;border-color:transparent}
+
+    .section {padding:76px 0}
+    .section-head {max-width:880px;margin-bottom:30px}
+    .section-head h2 {font-size:clamp(34px,4.4vw,58px);line-height:1;letter-spacing:-.055em;margin-bottom:16px}
+    .section-head p {color:var(--muted);font-size:17px;line-height:1.7;font-weight:700}
+    .catalog-grid {display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+
+    .project-card {border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,.045));border-radius:var(--radius);padding:24px;box-shadow:0 18px 48px rgba(0,0,0,.18);transition:.25s ease;position:relative;overflow:hidden;min-height:330px;display:flex;flex-direction:column;isolation:isolate}
+    .project-card::before {content:"";position:absolute;inset:0;background:radial-gradient(circle at 88% 8%,var(--accentA,rgba(255,211,106,.18)),transparent 30%),radial-gradient(circle at 12% 84%,var(--accentB,rgba(66,183,255,.12)),transparent 32%);z-index:-1}
+    .project-card:hover {transform:translateY(-7px);border-color:rgba(255,211,106,.38);box-shadow:0 24px 80px rgba(255,211,106,.13)}
+    .project-head {display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:18px}
+    .chip {display:inline-flex;padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.14);color:#dce8f8;font-size:12px;font-weight:950;line-height:1.2}
+    .chip-strong {background:rgba(255,211,106,.14);border-color:rgba(255,211,106,.24);color:#ffe08a}
+    .project-card h3 {font-size:23px;line-height:1.12;letter-spacing:-.025em;margin-bottom:10px}
+    .project-card p {color:var(--muted);line-height:1.6;font-size:14px;font-weight:700;flex:1}
+    .price-panel {display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin:18px 0 15px;padding:14px;border-radius:18px;background:rgba(0,0,0,.24);border:1px solid rgba(255,255,255,.12)}
+    .price-panel span {color:#8fa0ba;font-size:12px;text-transform:uppercase;font-weight:950;letter-spacing:.08em}
+    .price-panel strong {font-size:26px;line-height:1;color:#fff}
+    .project-actions {display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .project-actions.one {grid-template-columns:1fr}
+
+    .color-enem,.color-copa {--accentA:rgba(56,242,166,.22);--accentB:rgba(66,183,255,.16)}
+    .color-redacao,.color-portugues,.color-enfermagem {--accentA:rgba(255,79,216,.22);--accentB:rgba(255,95,115,.14)}
+    .color-revisao,.color-atualidades,.color-quimica,.color-transito {--accentA:rgba(255,211,106,.22);--accentB:rgba(255,138,0,.14)}
+    .color-sociologia,.color-fisica,.color-ingles,.color-data,.color-offshore,.color-tjce {--accentA:rgba(66,183,255,.22);--accentB:rgba(167,139,250,.14)}
+    .color-matematica,.color-filosofia,.color-literatura,.color-artes,.color-camara,.color-franquia,.color-elearning {--accentA:rgba(167,139,250,.22);--accentB:rgba(255,79,216,.14)}
+    .color-biologia,.color-geografia,.color-edfisica,.color-sefaz,.color-inss,.color-bancaria,.color-administrativo,.color-escola {--accentA:rgba(56,242,166,.22);--accentB:rgba(255,211,106,.12)}
+
+    .radar {padding:76px 0}
+    .radar-card {border:1px solid rgba(255,211,106,.30);background:radial-gradient(circle at 10% 15%,rgba(255,211,106,.18),transparent 32%),radial-gradient(circle at 90% 20%,rgba(66,183,255,.15),transparent 30%),linear-gradient(135deg,rgba(255,255,255,.10),rgba(255,255,255,.045));border-radius:36px;padding:36px;box-shadow:var(--shadow);display:grid;grid-template-columns:1.05fr .95fr;gap:26px;align-items:center}
+    .radar-card h2 {font-size:clamp(32px,4.4vw,58px);line-height:1;letter-spacing:-.055em;margin:12px 0;color:#fff}
+    .radar-card p {color:#d9e6f8;line-height:1.7;font-weight:750;font-size:17px}
+    .reward-list {display:grid;gap:12px}
+    .reward-list div {padding:15px;border-radius:18px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);font-weight:900;color:#edf6ff}
+    .reward-list b {color:var(--gold)}
+
+    .method-grid {display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .method-card {border:1px solid var(--line);background:rgba(255,255,255,.065);border-radius:26px;padding:24px;transition:.25s ease}
+    .method-card:hover {transform:translateY(-5px);border-color:rgba(66,183,255,.32)}
+    .method-icon {width:52px;height:52px;border-radius:18px;display:grid;place-items:center;background:linear-gradient(135deg,var(--gold),var(--blue));color:#07111f;font-size:24px;margin-bottom:16px}
+    .method-card h3 {font-size:21px;margin-bottom:8px}
+    .method-card p {color:var(--muted);font-weight:700;line-height:1.6;font-size:14px}
+
+    .cta {padding:76px 0}
+    .cta-box {border:1px solid rgba(56,242,166,.28);background:radial-gradient(circle at 12% 18%,rgba(56,242,166,.20),transparent 30%),radial-gradient(circle at 84% 14%,rgba(255,79,216,.16),transparent 28%),linear-gradient(135deg,rgba(255,255,255,.10),rgba(255,255,255,.05));border-radius:36px;padding:46px;text-align:center;box-shadow:var(--shadow)}
+    .cta-box h2 {font-size:clamp(34px,4.4vw,60px);letter-spacing:-.055em;line-height:1;margin-bottom:16px}
+    .cta-box p {color:#d9e6f8;line-height:1.7;max-width:780px;margin:0 auto 24px;font-weight:750;font-size:17px}
+
+    footer {border-top:1px solid var(--line);padding:30px 0;color:var(--muted);background:rgba(0,0,0,.24)}
+    .footer-inner {display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:14px;font-weight:800}
+    .mobile-cta {position:fixed;left:12px;right:12px;bottom:12px;z-index:80;display:none;align-items:center;justify-content:space-between;gap:12px;padding:12px;border-radius:18px;background:rgba(7,12,20,.95);border:1px solid rgba(255,255,255,.10);box-shadow:0 16px 40px rgba(0,0,0,.35)}
+    .mobile-cta small {display:block;color:var(--muted);font-size:12px}
+    .mobile-cta strong {display:block;font-size:15px;line-height:1.2}
+    .hidden {display:none!important}
+
+    @media(max-width:1050px) {
+      .hero-grid,.radar-card {grid-template-columns:1fr}
+      .catalog-grid {grid-template-columns:repeat(2,1fr)}
+      .method-grid,.hero-stats {grid-template-columns:repeat(2,1fr)}
+      .browser {min-height:auto}
+    }
+    @media(max-width:760px) {
+      .nav {height:auto;min-height:72px;padding:12px 0}
+      .nav-links {display:none}
+      .hero {padding-top:46px;min-height:auto}
+      h1 {font-size:54px}
+      .hero-stats,.catalog-grid,.method-grid,.mini-grid,.search-panel {grid-template-columns:1fr}
+      .filters {justify-content:flex-start}
+      .flow-row {grid-template-columns:1fr}
+      .section {padding:54px 0}
+      .radar,.cta {padding:54px 0}
+      .radar-card,.cta-box {padding:28px 20px}
+      .mobile-cta {display:flex}
+      body {padding-bottom:92px}
+      .project-actions {grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="ticker">
+    <div class="ticker-track">
+      <div><span>GABARITO MAX</span> • ENEM • Concursos • Profissões • Simulados digitais • Teste grátis • Premium • Treino objetivo • <span>GABARITO MAX</span> • ENEM • Concursos • Profissões • Simulados digitais • Teste grátis • Premium • Treino objetivo •</div>
+    </div>
+  </div>
+
+  <header>
+    <div class="container nav">
+      <a href="#top" class="brand">
+        <span class="brand-mark">✓</span>
+        <span><strong>Gabarito <em>Max</em></strong><small>Simulados Digitais</small></span>
+      </a>
+      <nav class="nav-links">
+        <a href="#ensino">Ensino</a>
+        <a href="#concursos">Concursos</a>
+        <a href="#profissoes">Profissões</a>
+        <a href="#radar-copa">Radar Copa</a>
+      </nav>
+      <a class="btn btn-primary" href="https://pay.kiwify.com.br/ai09spZ" target="_blank" rel="noopener noreferrer">DB ENEM Vitalício</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Portal oficial de simulados digitais</div>
+          <h1><span class="gradient-text">Gabarito Max</span></h1>
+          <p class="subtitle">Catálogo premium para ENEM, concursos e profissões com simulados organizados, teste grátis, acesso por disciplina e produtos digitais prontos para estudo.</p>
+          <p class="definition">A proposta é simples: escolher a área, testar gratuitamente e avançar para o premium quando quiser treinar com mais foco. Tudo organizado em uma vitrine direta, visual e compatível com produtos digitais.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#catalogo">Ver catálogo completo</a>
+            <a class="btn btn-ghost" href="#ensino">Começar pelo ENEM</a>
+            <a class="btn btn-ghost" href="#concursos">Ver concursos</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat"><strong>35</strong><span>produtos e simulados no catálogo</span></div>
+            <div class="stat"><strong>22</strong><span>itens em Ensino e DB ENEM</span></div>
+            <div class="stat"><strong>8</strong><span>treinos para concursos</span></div>
+            <div class="stat"><strong>5</strong><span>produtos de profissões</span></div>
+          </div>
+        </div>
+
+        <div class="hero-panel">
+          <div class="browser">
+            <div class="browser-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+            <div class="browser-body">
+              <div class="dash-title"><h2>Painel Gabarito Max</h2><span class="pill">Catálogo ativo</span></div>
+              <div class="mini-grid">
+                <div class="mini-card"><b>DB ENEM</b><small>Vitalício e disciplinas</small></div>
+                <div class="mini-card"><b>Concursos</b><small>Municipais e estaduais</small></div>
+                <div class="mini-card"><b>Profissões</b><small>Carreiras e certificações</small></div>
+                <div class="mini-card"><b>Premium</b><small>Links de venda preservados</small></div>
+              </div>
+              <div class="flow">
+                <div class="flow-row"><span>Organização</span><div class="bar"><i style="--w:94%"></i></div></div>
+                <div class="flow-row"><span>Conversão</span><div class="bar"><i style="--w:88%"></i></div></div>
+                <div class="flow-row"><span>Catálogo</span><div class="bar"><i style="--w:100%"></i></div></div>
+                <div class="flow-row"><span>Mobile</span><div class="bar"><i style="--w:92%"></i></div></div>
+              </div>
+              <div style="margin-top:22px" class="mini-card">
+                <b>Escolha → Teste → Premium</b>
+                <small>Fluxo simples para o aluno encontrar o produto certo e acessar rapidamente a compra.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="search-zone" id="catalogo">
+      <div class="container">
+        <div class="search-panel">
+          <input id="searchInput" type="search" placeholder="Buscar simulado, disciplina, concurso, profissão ou preço..." />
+          <div class="filters">
+            <button class="filter active" data-filter="todos">Todos</button>
+            <button class="filter" data-filter="ensino">Ensino</button>
+            <button class="filter" data-filter="concursos">Concursos</button>
+            <button class="filter" data-filter="profissoes">Profissões</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="radar" id="radar-copa">
+      <div class="container radar-card">
+        <div>
+          <div class="eyebrow">🎁 Integração Radar Copa 2026</div>
+          <h2>Simulados também podem gerar recompensas no álbum</h2>
+          <p>O arquivo de integração do Radar Copa foi mantido. Quem chega pelo Radar Copa pode receber aviso de recompensa e voltar ao álbum para resgate.</p>
+          <div class="hero-actions" style="margin-top:20px;margin-bottom:0">
+            <a class="btn btn-primary" href="https://dev-orient-social.github.io/radar-copa-2026-com-album/album/index.html?origem=radar_copa_album" target="_blank" rel="noopener noreferrer">Abrir álbum</a>
+            <a class="btn btn-ghost" href="#ensino">Escolher simulado</a>
+          </div>
+        </div>
+        <div class="reward-list">
+          <div><b>Acesso pelo Radar:</b> recompensa por visita identificada</div>
+          <div><b>Teste grátis:</b> caminho de entrada para novos alunos</div>
+          <div><b>Premium:</b> links de pagamento preservados</div>
+          <div><b>Catálogo:</b> Ensino, Concursos e Profissões em uma única vitrine</div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="section" id="ensino">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Área 1</div>
+          <h2>Ensino e DB ENEM</h2>
+          <p>Simulados escolares, ENEM e produtos digitais por disciplina.</p>
+        </div>
+        <div class="catalog-grid">
+          
+        <article class="project-card color-enem" data-area="ensino" data-search="ensino e db enem db enem db enem vitalício acesso completo aos 17 simulados digitais enem em uma única compra. db enem vitalício acesso completo aos 17 simulados digitais enem em uma única compra. db enem vitalício">
+          <div class="project-glow"></div>
+          <div class="project-head">
+            <span class="chip chip-strong">Vitalício</span>
+            <span class="chip">DB ENEM</span>
+          </div>
+          <h3>DB ENEM Vitalício</h3>
+          <p>Acesso completo aos 17 simulados digitais ENEM em uma única compra.</p>
+          <div class="price-panel"><span>Valor</span><strong>R$ 99,00</strong></div>
+          <div class="project-actions one"><a class="btn btn-primary" href="https://pay.kiwify.com.br/ai09spZ" target="_blank" rel="noopener noreferrer">Acessar Premium</a></div>
+        </article>
+
+        <article class="project-card color-redacao" data-area="ensino" data-search="ensino e db enem db enem redação enem premium treino de redação com estrutura, repertório, conclusão e temas modelo. redação enem premium treino de redação com estrutura, repertório, conclusão e temas modelo. db enem redação">
+          <div class="project-glow"></div>
+          <div class="project-head">
+            <span class="chip chip-strong">Redação</span>
+            <span class="chip">DB ENEM</span>
+          </div>
+          <h3>Redação ENEM Premium</h3>
+          <p>Treino de redação com estrutura, repertório, conclusão e temas modelo.</p>
+          <div class="price-panel"><span>Valor</span><strong>R$ 29,90</strong></div>
+          <div class="project-actions"><a class="btn btn-ghost" href="https://cincoregioes-star.github.io/reda-o-teste/?origem=portal_gabarito_max" target="_blank" rel="noopener noreferrer">Teste grátis</a><a class="btn btn-primary" href="https://pay.kiwify.com.br/NsDMCx9" target="_blank" rel="noopener noreferrer">Premium</a></div>
+        </article>
+
+        <article class="project-card color-revisao" data-area="ensino" data-search="ensino e db enem db enem revisão final enem premium revisão rápida com questões selecionadas para reta final. revisão final enem premium revisão rápida com questões selecionadas para reta final. db enem revisão">
+          <div class="project-glow"></div>
+          <div class="project-head">
+            <span class="chip chip-strong">Revisão</span>
+            <span class="chip">DB ENEM</span>
+          </div>
+          <h3>Revisão Final ENEM Premium</h3>
+          <p>Revisão rápida com questões selecionadas para reta final.</p>
+          <div class="price-panel"><span>Valor</span><strong>R$ 9,90</strong></div>
+          <div class="project-actions"><a class="btn btn-ghost" href="https://cincoregioes-star.github.io/revisao-final-enem-teste/?origem=portal_gabarito_max" target="_blank" rel="noopener noreferrer">Teste grátis</a><a class="btn btn-primary" href="https://pay.kiwify.com.br/A20iS8u" target="_blank" rel="noopener noreferrer">Premium</a></div>
+        </article>
+
+        <article class="project-card color-atualidades" data-area="ensino" data-search="ensino e db enem db enem atualidades enem premium temas recentes conectados às competências do enem. atualidades enem premium temas recentes conectados às competências do enem. db enem premium">
+          <div class="project-glow"></div>
+          <div class="project-head">
+            <span class="chip chip-strong">Premium</span>
+            <span class="chip">DB ENEM</span>
+          </div>
+          <h3>Atualidades ENEM Premium</h3>
+          <p>Temas recentes conectados às competências do ENEM.</p>
+          <div class="price-panel"><span>Valor</span><strong>R$ 19,90</strong></div>
+          <div class="project-actions"><a class="btn btn-ghost" href="https://cincoregioes-star.github.io/atualidades-teste/?origem=portal_gabarito_max" target="_blank" rel="noopener noreferrer">Teste grátis</a><a class="btn btn-primary" href="https://pay.kiwify.com.br/4yauUSB" target="_blank" rel="noopener noreferrer">Premium</a></div>
+        </article>
+
+        <article class="project-card color-sociologia" data-area="ensino" data-search="ensino e db enem db enem sociologia enem premium cultura, trabalho, desigualdade, cidadania e movimentos sociais. sociologia enem premium cultura, trabalho, desigualdade, cidadania e movimentos sociais. db enem premium">
+          <div class="project-glow"></div>
+          <div class="project-head">
+            <span class="chip chip-strong">Premium</span>
+            <span class="chip">DB ENEM</span>
+          </div>
+          <h3>Sociologia ENEM Premium</h3>
+          <p>Cultura, trabalho, desigualdade, cidadania e movimentos sociais.</p>
+          <div class="price-panel"><span>Valor</span><strong>R$ 19,90</strong></div>
+          <div class="project-actions"><a class="btn btn-ghost" href="https://cincoregioes-star.github.io/sociologia-teste/?origem=portal_gabarito_max" target="_blank" rel="noopener noreferrer">Teste grátis</a><a class="btn btn-primary" href="https://pay.kiwify.com.br/cVUqErx" target="_blank" rel="noopener noreferrer">Premium</a></div>
+        </article>
+
+        <article class="project-card color-matematica" data-area="ensino" data-search="ensino e db enem db enem matemática enem premium questões objetivas de matemática aplicada no padrão enem. matemática enem premium questões objetivas de matemática aplicada no padrão enem. db enem premium">
+          <div class="project-glow"></div>
+          <div class="project-head">
+            <span class="chip chip-strong">Premium</span>
+            <span class="chip">DB ENEM</span>
+          </div>
+          <h3>Matemática ENEM Premium</h3>
+          <p>Questões objetivas de matemática aplicada no padrão ENEM.</p>
+          <div class="price-panel"><span>Valor</span><strong>R$ 19,90</strong></div>
+          <div class="project-actions"><a class="btn btn-ghost" href="https://cincoregioes-star.github.io/matematica-teste/?origem=portal_gabarito_max" target="_blank" rel="noopener noreferrer">Teste grátis</a><a class="btn btn-primary" href="https://pay.kiwify.com.br/SKiUUvs" target="_blank" rel="noopener noreferrer">Premium</a></div>
+        </article>
+
+        <article class="project-card color-fisica" data-area="ensino" data-search="ensino e db enem db enem física enem premium energia, mecânica, eletricidade, ondas e interpretação de problemas. física enem premium energia, mecânica, eletricidade, ondas e interpretação de problemas. db enem premium">
+          <div class="project-glow"></div>
+          <div class="project-head">
+            <span class="chip chip-strong">Premium</span>
+            <span class="chip">DB ENEM</span>
+          </div>
+          <h3>Física ENEM Premium</h3>
+          <p>Energia, mecânica, eletricidade, ondas e interpretação de problemas.</p>
+          <div class="price-panel"><span>Valor</span><strong>R$ 19,90</strong></div>
+          <div class="project-actions"><a class="btn btn-ghost" href="https://cincoregioes-star.github.io/fisica-teste/?origem=portal_gabarito_max" target="_blank" rel="noopener noreferrer">Teste grátis</a><a class="btn btn-primary" href="https://pay.kiwify.com.br/qTTx3pO" target="_blank" rel="noopener noreferrer">Premium</a></div>
+        </article>
+
+        <article class="project-card color-quimica" data-area="ensino" data-search="ensino e db enem db enem química enem premium química geral, orgânica, ambiental e interpretação de gráficos. química enem premium química geral, orgânica, ambiental e interpretação de gráficos. db enem premium">
+          <div class="project-glow"></div>
+          <div class="project-head">
+            <span class="chip chip-strong">Premium</span>
+            <span class="chip">DB ENEM</span>
+          </div>
+          <h3>Química ENEM Premium</h3>
+          <p>Química geral, orgânica, ambiental e interpretação de gráficos.</p>
+          <div class="price-panel"><span>Valor</span><strong>R$ 19,90</strong></div>
+          <div class="project-actions"><a class="btn btn-ghost" href="https://cincoregioes-star.github.io/quimica-teste/?origem=portal_gabarito_max" target="_blank" rel="noopener noreferrer">Teste grátis</a><a class="btn btn-primary" href="https://pay.kiwify.com.br/KRVxuLb" target="_blank" rel="noopener noreferrer">Premium</a></div>
+        </article>
+
+        <article class="project-card color-biologia" data-area="ensino" data-search="ensino e db enem db enem biologia enem premium ecologia, genética, fisiologia, evolução e saúde pública. biologia enem premium ecologia, genética, fisiologia, evolução e saúde pública. db enem premium">
+          <div class="project-glow"></div>
+          <div class="project-head">
+            <span class="chip chip-strong">Premium</span>
+            <span class="chip">DB ENEM</span>
+          </div>
+          <h3>Biologia ENEM Premium</h3>
+          <p>Ecologia, genética, fisiologia, evolução e saúde pública.</p>
+          <div class="price-panel"><span>Valor</span><strong>R$ 19,90</strong></div>
+          <div class="project-actions"><a class="btn btn-ghost" href="https://cincoregioes-star.github.io/biologia-teste/?origem=portal_gabarito_max" target="_blank" rel="noopener noreferrer">Teste grátis</a><a class="btn btn-primary" href="https://pay.kiwify.com.br/RGfxyUn" target="_blank" rel="noopener noreferrer">Premium</a></div>
+        </article>
+
+        <article class="project-card color-filosofia" data-area="ensino" data-search="ensino e db enem db enem filosofia enem premium pensadores, ética, política, conhecimento e sociedade. filosofia enem premium pensadores, ética, política, conhecimento e sociedade. db enem premium">
+          <div class="project-glow"></div>
+          <div class="project-head">
+            <span class="chip chip-strong">Premium</span>
+            <span class="chip">DB ENEM</span>
+          </div>
+          <h3>Filosofia ENEM Premium</h3>
+          <p>Pensadores, ética, política, conhecimento e sociedade.</p>
+          <div class="price-panel"><span>Valor</span><strong>R$ 19,90</strong></div>
+          <div class="project-actions"><a class="btn btn-ghost" href="https://cincoregioes-star.github.io/filosofia-teste/?origem=portal_gabarito_max" target="_blank" rel="noopener noreferrer">Teste grátis</a><a class="btn btn-primary" href="https://pay.kiwify.com.br/B6iF4hA" target="_blank" rel="noopener noreferrer">Premium</a></div>
+        </article>
+
+        <article class="project-card color-historia" data-area="ensino" data-search="ensino e db enem db enem história enem premium brasil, mundo contemporâneo, cidadania e interpretação histórica. história enem premium brasil, mundo contemporâneo, cidadania e interpretação histórica. db enem premium">
+          <div class="project-glow"></div>
+          <div class="project-head">
+            <span class="chip chip-strong">Premium</span>
+            <span class="chip">DB ENEM</span>
+          </div>
+          <h3>História ENEM Premium</h3>
+          <p>Brasil, mundo contemporâneo, cidadania e interpretação histórica.</p>
+          <div class="price-panel"><span>Valor</span><strong>R$ 19,90</strong></div>
+          <div class="project-actions"><a class="btn btn-ghost" href="https://cincoregioes-star.github.io/historia-teste/?origem=portal_gabarito_max" target="_blank" rel="noopener noreferrer">Teste grátis</a><a class="btn btn-primary" href="https://pay.kiwify.com.br/h8GJzVE" target="_blank" rel="noopener noreferrer">Premium</a></div>
+        </article>
+
+        <article class="project-card color-geografia" data-area="ensino" data-search="ensino e db enem db enem geografia enem premium geopolítica, urbanização, clima, cartografia e atualidades. geografia enem premium geopolítica, urbanização, clima, cartografia e atualidades. db enem premium">
+          <div class="project-glow"></div>
+          <div class="project-head">
+            <span class="chip chip-strong">Premium</span>
+            <span class="chip">DB ENEM</span>
+          </div>
+          <h3>Geografia ENEM Premium</h3>
+          <p>Geopolítica, urbanização, clima, cartografia e atualidades.</p>
+          <div class="price-panel"><span>Valor</span><strong>R$ 19,90</strong></div>
+          <div class="project-actions"><a class="btn btn-ghost" href="https://cincoregioes-star.github.io/geografia-teste/?origem=portal_gabarito_max" target="_blank" rel="noopener noreferrer">Teste grátis</a><a class="btn btn-primary" href="https://pay.kiwify.com.br/64GnsBH" target="_blank" rel="noopener noreferrer">Premium</a></div>
+        </article>
+
+        <article class="project-card color-portugues" data-area="ensino" data-search="ensino e db enem db enem português enem premium simulado por disciplina com questões digitais e revisão objetiva. português enem premium simulado por disciplina com questões digitais e revisão objetiva. db enem premium">
+          <div class="project-glow"></div>
+          <div class="project-head">
+            <span class="chip chip-strong">Premium</span>
+            <span class="chip">DB ENEM</span>
+          </div>
+          <h3>Português ENEM Premium</h3>
+          <p>Simulado por disciplina com questões digitais e revisão objetiva.</p>
+          <div class="price-panel"><span>Valor</span><strong>R$ 19,90</strong></div>
+          <div class="project-actions"><a class="btn btn-ghost" href="https://cincoregioes-star.github.io/portugues-teste/?origem=portal_gabarito_max" target="_blank" rel="noopener noreferrer">Teste grátis</a><a class="btn btn-primary" href="https://pay.kiwify.com.br/QxRaDJy" target="_blank" rel="noopener noreferrer">Premium</a></div>
+        </article>
+
+        <article class="project-card color-literatura" data-area="ensino" data-search="ensino e db enem db enem literatura enem premium treino focado em escolas literárias, interpretação e autores cobrados. literatura enem premium treino focado em escolas literárias, interpretação e autores cobrados. db enem premium">
+          <div class="project-glow"></div>
+          <div class="project-head">
+            <span class="chip chip-strong">Premium</span>
+            <span class="chip">DB ENEM</span>
+          </div>
+          <h3>Literatura ENEM Premium</h3>
+          <p>Treino focado em escolas literárias, interpretação e autores cobrados.</p>
+          <div class="price-panel"><span>Valor</span><strong>R$ 19,90</strong></div>
+          <div class="project-actions"><a class="btn btn-ghost" href="https://cincoregioes-star.github.io/literatura-teste/?origem=portal_gabarito_max" target="_blank" rel="noopener noreferrer">Teste grátis</a><a class="btn btn-primary" href="https://pay.kiwify.com.br/plt5Mut" target="_blank" rel="noopener noreferrer">Premium</a></div>
+        </article>
+
+        <article class="project-card color-ingles" data-area="ensino" data-search="ensino e db enem db enem inglês enem premium leitura, vocabulário, interpretação e estratégias para prova. inglês enem premium leitura, vocabulário, interpretação e estratégias para prova. db enem premium">
+          <div class="project-glow"></div>
+          <div class="project-head">
+            <span class="chip chip-strong">Premium</span>
+            <span class="chip">DB ENEM</span>
+          </div>
+          <h3>Inglês ENEM Premium</h3>
+          <p>Leitura, vocabulário, interpretação e estratégias para prova.</p>
+          <div class="price-panel"><span>Valor</span><strong>R$ 19,90</strong></div>
+          <div class="project-actions"><a class="btn btn-ghost" href="https://cincoregioes-star.github.io/ingles-teste/?origem=portal_gabarito_max" target="_blank" rel="noopener noreferrer">Teste grátis</a><a class="btn btn-primary" href="https://pay.kiwify.com.br/Z1n4Xve" target="_blank" rel="noopener noreferrer">Premium</a></div>
+        </article>
+
+        <article class="project-card color-espanhol" data-area="ensino" data-search="ensino e db enem db enem espanhol enem premium simulado de língua espanhola com foco em interpretação textual. espanhol enem premium simulado de língua espanhola com foco em interpretação textual. db enem premium">
+          <div class="project-glow"></div>
+          <div class="project-head">
+            <span class="chip chip-strong">Premium</span>
+            <span class="chip">DB ENEM</span>
+          </div>
+          <h3>Espanhol ENEM Premium</h3>
+          <p>Simulado de língua espanhola com foco em interpretação textual.</p>
+          <div class="price-panel"><span>Valor</span><strong>R$ 19,90</strong></div>
+          <div class="project-actions"><a class="btn btn-ghost" href="https://cincoregioes-star.github.io/espanhol-teste/?origem=portal_gabarito_max" target="_blank" rel="noopener noreferrer">Teste grátis</a><a class="btn btn-primary" href="https://pay.kiwify.com.br/THSH11k" target="_blank" rel="noopener noreferrer">Premium</a></div>
+        </article>
+
+        <article class="project-card color-artes" data-area="ensino" data-search="ensino e db enem db enem artes enem premium arte, cultura, linguagem visual e movimentos artísticos. artes enem premium arte, cultura, linguagem visual e movimentos artísticos. db enem premium">
+          <div class="project-glow"></div>
+          <div class="project-head">
+            <span class="chip chip-strong">Premium</span>
+            <span class="chip">DB ENEM</span>
+          </div>
+          <h3>Artes ENEM Premium</h3>
+          <p>Arte, cultura, linguagem visual e movimentos artísticos.</p>
+          <div class="price-panel"><span>Valor</span><strong>R$ 19,90</strong></div>
+          <div class="project-actions"><a class="btn btn-ghost" href="https://cincoregioes-star.github.io/artes-teste/?origem=portal_gabarito_max" target="_blank" rel="noopener noreferrer">Teste grátis</a><a class="btn btn-primary" href="https://pay.kiwify.com.br/uHVp2Hl" target="_blank" rel="noopener noreferrer">Premium</a></div>
+        </article>
+
+        <article class="project-card color-edfisica" data-area="ensino" data-search="ensino e db enem db enem educação física enem premium saúde, corpo, esporte, cultura corporal e qualidade de vida. educação física enem premium saúde, corpo, esporte, cultura corporal e qualidade de vida. db enem premium">
+          <div class="project-glow"></div>
+          <div class="project-head">
+            <span class="chip chip-strong">Premium</span>
+            <span class="chip">DB ENEM</span>
+          </div>
+          <h3>Educação Física ENEM Premium</h3>
+          <p>Saúde, corpo, esporte, cultura corporal e qualidade de vida.</p>
+          <div class="price-panel"><span>Valor</span><strong>R$ 19,90</strong></div>
+          <div class="project-actions"><a class="btn btn-ghost" href="https://cincoregioes-star.github.io/ed-fisica-teste/?origem=portal_gabarito_max" target="_blank" rel="noopener noreferrer">Teste grátis</a><a class="btn btn-primary" href="https://pay.kiwify.com.br/TOIMG48" target="_blank" rel="noopener noreferrer">Premium</a></div>
+        </article>
+
+        <article class="project-card color-enem" data-area="ensino" data-search="ensino e db enem gabarito max simulado enem 2026 produto completo para treino geral enem com simulados digitais simulado enem 2026 — gabarito max produto completo para treino geral enem com simulados digitais. teste grátis libera pacotes e premium libera 20 pacotes. gabarito max completo">
+          <div class="project-glow"></div>
+          <div class="project-head">
+            <span class="chip chip-strong">Completo</span>
+            <span class="chip">Gabarito Max</span>
+          </div>
+          <h3>Simulado ENEM 2026 — Gabarito Max</h3>
+          <p>Produto completo para treino geral ENEM com simulados digitais. Teste grátis libera pacotes e premium libera 20 pacotes.</p>
+          <div class="price-panel"><span>Valor</span><strong>R$ 49,90</strong></div>
+          <div class="project-actions"><a class="btn btn-ghost" href="https://cincoregioes-star.github.io/teste-enem-2026/" target="_blank" rel="noopener noreferrer">Teste grátis</a><a class="btn btn-primary" href="https://pay.kiwify.com.br/YPRutfT" target="_blank" rel="noopener noreferrer">Premium</a></div>
+        </article>
+
+        <article class="project-card color-escola" data-area="ensino" data-search="ensino e db enem ensino fundamental gabarito max 9º ano — revisão interativa revisão escolar interativa para estudantes do 9º ano. gabarito max 9º ano — revisão interativa revisão escolar interativa para estudantes do 9º ano. ensino fundamental escola">
+          <div class="project-glow"></div>
+          <div class="project-head">
+            <span class="chip chip-strong">Escola</span>
+            <span class="chip">Ensino Fundamental</span>
+          </div>
+          <h3>Gabarito Max 9º Ano — Revisão Interativa</h3>
+          <p>Revisão escolar interativa para estudantes do 9º ano.</p>
+          <div class="price-panel"><span>Valor</span><strong>R$ 20,00</strong></div>
+          <div class="project-actions"><a class="btn btn-ghost" href="https://cincoregioes-star.github.io/gabarito-max-9ano/?origem=portal_gabarito_max" target="_blank" rel="noopener noreferrer">Teste grátis</a><a class="btn btn-primary" href="https://pay.kiwify.com.br/neZ2oHx" target="_blank" rel="noopener noreferrer">Premium</a></div>
+        </article>
+
+        <article class="project-card color-escola" data-area="ensino" data-search="ensino e db enem ensino médio gabarito max — revisão nacional 1º ano estrutura ampla de revisão para estudantes do 1º ano do ensino médio. gabarito max — revisão nacional 1º ano estrutura ampla de revisão para estudantes do 1º ano do ensino médio. ensino médio em preparação">
+          <div class="project-glow"></div>
+          <div class="project-head">
+            <span class="chip chip-strong">Em preparação</span>
+            <span class="chip">Ensino Médio</span>
+          </div>
+          <h3>Gabarito Max — Revisão Nacional 1º Ano</h3>
+          <p>Estrutura ampla de revisão para estudantes do 1º ano do ensino médio.</p>
+          <div class="price-panel"><span>Valor</span><strong>R$ 37,90</strong></div>
+          <div class="project-actions one"><span class="btn btn-muted">Produto em preparação</span></div>
+        </article>
+
+        <article class="project-card color-escola" data-area="ensino" data-search="ensino e db enem ensino médio gabarito max — revisão gamificada 1º ano revisão com experiência leve, visual e gamificada. gabarito max — revisão gamificada 1º ano revisão com experiência leve, visual e gamificada. ensino médio em preparação">
+          <div class="project-glow"></div>
+          <div class="project-head">
+            <span class="chip chip-strong">Em preparação</span>
+            <span class="chip">Ensino Médio</span>
+          </div>
+          <h3>Gabarito Max — Revisão Gamificada 1º Ano</h3>
+          <p>Revisão com experiência leve, visual e gamificada.</p>
+          <div class="price-panel"><span>Valor</span><strong>R$ 20,00</strong></div>
+          <div class="project-actions one"><span class="btn btn-muted">Produto em preparação</span></div>
+        </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="concursos">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Área 2</div>
+          <h2>Concursos</h2>
+          <p>Treinos digitais para concursos municipais, estaduais e áreas administrativas.</p>
+        </div>
+        <div class="catalog-grid">
+          
+        <article class="project-card color-sefaz" data-area="concursos" data-search="concursos concurso estadual sefaz ce 2026 — auditor-fiscal premium fcc com 13 módulos, 260 questões comentadas e treino discursivo. sefaz ce 2026 — auditor-fiscal premium fcc com 13 módulos, 260 questões comentadas, treino discursivo e 20 pacotes no álbum. concurso estadual novo">
+          <div class="project-glow"></div>
+          <div class="project-head">
+            <span class="chip chip-strong">Novo</span>
+            <span class="chip">Concurso Estadual</span>
+          </div>
+          <h3>SEFAZ CE 2026 — Auditor-Fiscal</h3>
+          <p>Premium FCC com 13 módulos, 260 questões comentadas, treino discursivo e 20 pacotes no álbum.</p>
+          <div class="price-panel"><span>Valor</span><strong>R$ 39,90</strong></div>
+          <div class="project-actions"><a class="btn btn-ghost" href="https://cincoregioes-star.github.io/sefaz-teste/" target="_blank" rel="noopener noreferrer">Teste grátis</a><a class="btn btn-primary" href="https://pay.kiwify.com.br/A9KsBsk" target="_blank" rel="noopener noreferrer">Premium</a></div>
+        </article>
+
+        <article class="project-card color-tjce" data-area="concursos" data-search="concursos concurso estadual tj ce 2026 — técnico/analista judiciário simulado no estilo fcc com módulos por disciplina e treinamento premium. tj ce 2026 — técnico/analista judiciário simulado no estilo fcc com teste grátis valendo pacotes e premium com 20 pacotes. concurso estadual novo">
+          <div class="project-glow"></div>
+          <div class="project-head">
+            <span class="chip chip-strong">Novo</span>
+            <span class="chip">Concurso Estadual</span>
+          </div>
+          <h3>TJ CE 2026 — Técnico/Analista Judiciário</h3>
+          <p>Simulado no estilo FCC com teste grátis valendo pacotes e premium com 20 pacotes.</p>
+          <div class="price-panel"><span>Valor</span><strong>R$ 19,90</strong></div>
+          <div class="project-actions"><a class="btn btn-ghost" href="https://cincoregioes-star.github.io/tjce-teste/" target="_blank" rel="noopener noreferrer">Teste grátis</a><a class="btn btn-primary" href="https://pay.kiwify.com.br/ut2sHA7" target="_blank" rel="noopener noreferrer">Premium</a></div>
+        </article>
+
+        <article class="project-card color-camara" data-area="concursos" data-search="concursos concurso municipal câmara de beberibe — analista administrativo simulado direcionado para área administrativa municipal. câmara de beberibe — analista administrativo simulado direcionado para área administrativa municipal. concurso municipal municipal">
+          <div class="project-glow"></div>
+          <div class="project-head">
+            <span class="chip chip-strong">Municipal</span>
+            <span class="chip">Concurso Municipal</span>
+          </div>
+          <h3>Câmara de Beberibe — Analista Administrativo</h3>
+          <p>Simulado direcionado para área administrativa municipal.</p>
+          <div class="price-panel"><span>Valor</span><strong>R$ 19,90</strong></div>
+          <div class="project-actions"><a class="btn btn-ghost" href="https://cincoregioes-star.github.io/simulado-analista-adm-isca/?origem=portal_gabarito_max" target="_blank" rel="noopener noreferrer">Teste grátis</a><a class="btn btn-primary" href="https://pay.kiwify.com.br/AMEiNRc" target="_blank" rel="noopener noreferrer">Premium</a></div>
+        </article>
+
+        <article class="project-card color-administrativo" data-area="concursos" data-search="concursos concurso administrativo concurso analista administrativo treinamento para cargos administrativos em prefeituras, câmaras e órgãos públicos. concurso analista administrativo treinamento para cargos administrativos em prefeituras, câmaras e órgãos públicos. concurso administrativo administrativo">
+          <div class="project-glow"></div>
+          <div class="project-head">
+            <span class="chip chip-strong">Administrativo</span>
+            <span class="chip">Concurso Administrativo</span>
+          </div>
+          <h3>Concurso Analista Administrativo</h3>
+          <p>Treinamento para cargos administrativos em prefeituras, câmaras e órgãos públicos.</p>
+          <div class="price-panel"><span>Valor</span><strong>R$ 29,90</strong></div>
+          <div class="project-actions"><a class="btn btn-ghost" href="https://cincoregioes-star.github.io/simulado-analista-adm-isca/?origem=portal_gabarito_max" target="_blank" rel="noopener noreferrer">Teste grátis</a><a class="btn btn-primary" href="https://pay.kiwify.com.br/AMEiNRc" target="_blank" rel="noopener noreferrer">Premium</a></div>
+        </article>
+
+        <article class="project-card color-inss" data-area="concursos" data-search="concursos concurso previdenciário gabarito max inss — área premium simulado para revisão de conhecimentos cobrados em concursos previdenciários. gabarito max inss — área premium simulado para revisão de conhecimentos cobrados em concursos previdenciários. concurso previdenciário inss">
+          <div class="project-glow"></div>
+          <div class="project-head">
+            <span class="chip chip-strong">INSS</span>
+            <span class="chip">Concurso Previdenciário</span>
+          </div>
+          <h3>Gabarito Max INSS — Área Premium</h3>
+          <p>Simulado para revisão de conhecimentos cobrados em concursos previdenciários.</p>
+          <div class="price-panel"><span>Valor</span><strong>R$ 29,90</strong></div>
+          <div class="project-actions"><a class="btn btn-ghost" href="https://cincoregioes-star.github.io/simuladomax-inss-gratis/?origem=portal_gabarito_max" target="_blank" rel="noopener noreferrer">Teste grátis</a><a class="btn btn-primary" href="https://pay.kiwify.com.br/PTaBuUI" target="_blank" rel="noopener noreferrer">Premium</a></div>
+        </article>
+
+        <article class="project-card color-bancaria" data-area="concursos" data-search="concursos concurso bancário gabarito max bancárias — premium simulado para bancos, atendimento, matemática e conhecimentos bancários. gabarito max bancárias — premium simulado para bancos, atendimento, matemática e conhecimentos bancários. concurso bancário bancárias">
+          <div class="project-glow"></div>
+          <div class="project-head">
+            <span class="chip chip-strong">Bancárias</span>
+            <span class="chip">Concurso Bancário</span>
+          </div>
+          <h3>Gabarito Max Bancárias — Premium</h3>
+          <p>Simulado para bancos, atendimento, matemática e conhecimentos bancários.</p>
+          <div class="price-panel"><span>Valor</span><strong>R$ 37,90</strong></div>
+          <div class="project-actions"><a class="btn btn-ghost" href="https://cincoregioes-star.github.io/gabarito-max-bancarias/?origem=portal_gabarito_max" target="_blank" rel="noopener noreferrer">Teste grátis</a><a class="btn btn-primary" href="https://kiwify.app/A4s1RsQ" target="_blank" rel="noopener noreferrer">Premium</a></div>
+        </article>
+
+        <article class="project-card color-transito" data-area="concursos" data-search="concursos concurso municipal gabarito max — morada nova agente de trânsito treinamento digital para cargo de agente de trânsito. gabarito max — morada nova agente de trânsito treinamento digital para cargo de agente de trânsito. concurso municipal trânsito">
+          <div class="project-glow"></div>
+          <div class="project-head">
+            <span class="chip chip-strong">Trânsito</span>
+            <span class="chip">Concurso Municipal</span>
+          </div>
+          <h3>Gabarito Max — Morada Nova Agente de Trânsito</h3>
+          <p>Treinamento digital para cargo de agente de trânsito.</p>
+          <div class="price-panel"><span>Valor</span><strong>R$ 19,90</strong></div>
+          <div class="project-actions"><a class="btn btn-ghost" href="https://cincoregioes-star.github.io/gabarito-max-moradanova_teste/?origem=portal_gabarito_max" target="_blank" rel="noopener noreferrer">Teste grátis</a><a class="btn btn-primary" href="https://pay.kiwify.com.br/Xl9jnTb" target="_blank" rel="noopener noreferrer">Premium</a></div>
+        </article>
+
+        <article class="project-card color-copa" data-area="concursos" data-search="concursos copa e atualidades gabarito max — simulado copa do mundo premium simulado temático com questões de atualidades, geografia, história e copa 2026. gabarito max — simulado copa do mundo premium simulado temático com questões de atualidades, geografia, história e copa 2026. copa e atualidades copa 2026">
+          <div class="project-glow"></div>
+          <div class="project-head">
+            <span class="chip chip-strong">Copa 2026</span>
+            <span class="chip">Copa e Atualidades</span>
+          </div>
+          <h3>Gabarito Max — Simulado Copa do Mundo Premium</h3>
+          <p>Simulado temático com questões de atualidades, geografia, história e Copa 2026.</p>
+          <div class="price-panel"><span>Valor</span><strong>R$ 14,99</strong></div>
+          <div class="project-actions"><a class="btn btn-ghost" href="https://cincoregioes-star.github.io/-simulado-copa-isca/?origem=portal_gabarito_max" target="_blank" rel="noopener noreferrer">Teste grátis</a><a class="btn btn-primary" href="https://pay.kiwify.com.br/8rMJ1I1" target="_blank" rel="noopener noreferrer">Premium</a></div>
+        </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="profissoes">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Área 3</div>
+          <h2>Profissões</h2>
+          <p>Simuladores para carreira, certificações e qualificação profissional.</p>
+        </div>
+        <div class="catalog-grid">
+          
+        <article class="project-card color-elearning" data-area="profissoes" data-search="profissões educação digital gabarito max — especialista em e-learning &amp; di simulado profissional para design instrucional, ead e produção educacional. gabarito max — especialista em e-learning &amp; di simulado profissional para design instrucional, ead e produção educacional. educação digital carreira">
+          <div class="project-glow"></div>
+          <div class="project-head">
+            <span class="chip chip-strong">Carreira</span>
+            <span class="chip">Educação Digital</span>
+          </div>
+          <h3>Gabarito Max — Especialista em E-learning &amp; DI</h3>
+          <p>Simulado profissional para design instrucional, EAD e produção educacional.</p>
+          <div class="price-panel"><span>Valor</span><strong>R$ 39,90</strong></div>
+          <div class="project-actions one"><a class="btn btn-primary" href="https://pay.kiwify.com.br/ZdGjxyf" target="_blank" rel="noopener noreferrer">Acessar Premium</a></div>
+        </article>
+
+        <article class="project-card color-offshore" data-area="profissoes" data-search="profissões marítimo e offshore simulador gabarito max — marítimo &amp; offshore simulado profissional para área marítima, offshore e segurança operacional. simulador gabarito max — marítimo &amp; offshore simulado profissional para área marítima, offshore e segurança operacional. marítimo e offshore offshore">
+          <div class="project-glow"></div>
+          <div class="project-head">
+            <span class="chip chip-strong">Offshore</span>
+            <span class="chip">Marítimo e Offshore</span>
+          </div>
+          <h3>Simulador Gabarito Max — Marítimo &amp; Offshore</h3>
+          <p>Simulado profissional para área marítima, offshore e segurança operacional.</p>
+          <div class="price-panel"><span>Valor</span><strong>R$ 37,90</strong></div>
+          <div class="project-actions one"><a class="btn btn-primary" href="https://pay.kiwify.com.br/2mO8t57" target="_blank" rel="noopener noreferrer">Acessar Premium</a></div>
+        </article>
+
+        <article class="project-card color-enfermagem" data-area="profissoes" data-search="profissões saúde simulador gabarito max — técnico em enfermagem treino para técnico em enfermagem com foco em prática, ética e legislação. simulador gabarito max — técnico em enfermagem treino para técnico em enfermagem com foco em prática, ética e legislação. saúde saúde">
+          <div class="project-glow"></div>
+          <div class="project-head">
+            <span class="chip chip-strong">Saúde</span>
+            <span class="chip">Saúde</span>
+          </div>
+          <h3>Simulador Gabarito Max — Técnico em Enfermagem</h3>
+          <p>Treino para técnico em enfermagem com foco em prática, ética e legislação.</p>
+          <div class="price-panel"><span>Valor</span><strong>R$ 47,90</strong></div>
+          <div class="project-actions one"><a class="btn btn-primary" href="https://pay.kiwify.com.br/DCdcdmJ" target="_blank" rel="noopener noreferrer">Acessar Premium</a></div>
+        </article>
+
+        <article class="project-card color-franquia" data-area="profissoes" data-search="profissões certificação simulador profissional de franquia — certificação padrão treinamento para qualificação e avaliação de conhecimentos sobre franquias. simulador profissional de franquia — certificação padrão treinamento para qualificação e avaliação de conhecimentos sobre franquias. certificação em preparação">
+          <div class="project-glow"></div>
+          <div class="project-head">
+            <span class="chip chip-strong">Em preparação</span>
+            <span class="chip">Certificação</span>
+          </div>
+          <h3>Simulador Profissional de Franquia — Certificação Padrão</h3>
+          <p>Treinamento para qualificação e avaliação de conhecimentos sobre franquias.</p>
+          <div class="price-panel"><span>Valor</span><strong>R$ 19,90</strong></div>
+          <div class="project-actions one"><span class="btn btn-muted">Produto em preparação</span></div>
+        </article>
+
+        <article class="project-card color-data" data-area="profissoes" data-search="profissões tecnologia data &amp; ai interview pro — alta performance preparação para entrevistas de dados, ia e tecnologia. data &amp; ai interview pro — alta performance preparação para entrevistas de dados, ia e tecnologia. tecnologia em preparação">
+          <div class="project-glow"></div>
+          <div class="project-head">
+            <span class="chip chip-strong">Em preparação</span>
+            <span class="chip">Tecnologia</span>
+          </div>
+          <h3>Data &amp; AI Interview Pro — Alta Performance</h3>
+          <p>Preparação para entrevistas de dados, IA e tecnologia.</p>
+          <div class="price-panel"><span>Valor</span><strong>R$ 67,00</strong></div>
+          <div class="project-actions one"><span class="btn btn-muted">Produto em preparação</span></div>
+        </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="metodo">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Método</div>
+          <h2>Fluxo simples para estudar e comprar</h2>
+          <p>O layout Syntropic deixa o catálogo mais comercial, mais claro e mais fácil de navegar em celular.</p>
+        </div>
+        <div class="method-grid">
+          <div class="method-card"><div class="method-icon">🔎</div><h3>Buscar</h3><p>O aluno encontra rapidamente disciplina, concurso ou profissão.</p></div>
+          <div class="method-card"><div class="method-icon">🧪</div><h3>Testar</h3><p>Os botões de teste grátis continuam preservados em cada card.</p></div>
+          <div class="method-card"><div class="method-icon">💳</div><h3>Comprar</h3><p>Os links premium da Kiwify foram mantidos nos produtos disponíveis.</p></div>
+          <div class="method-card"><div class="method-icon">🚀</div><h3>Escalar</h3><p>Novos simulados podem ser adicionados seguindo o mesmo padrão visual.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta-box">
+        <h2>Treine com simulados digitais organizados</h2>
+        <p>Escolha uma área, faça o teste grátis e avance para o premium quando quiser continuar estudando com foco.</p>
+        <a class="btn btn-primary" href="#catalogo">Ver catálogo completo</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>Gabarito Max © <span id="ano"></span> — Simulados Digitais</span>
+      <span>ENEM • Concursos • Profissões • Produtos Premium</span>
+    </div>
+  </footer>
+
+  <div class="mobile-cta">
+    <div><small>Gabarito Max</small><strong>DB ENEM Vitalício</strong></div>
+    <a class="btn btn-primary" href="https://pay.kiwify.com.br/ai09spZ" target="_blank" rel="noopener noreferrer">Comprar</a>
+  </div>
+
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const cards = Array.from(document.querySelectorAll('.project-card'));
+    const filters = Array.from(document.querySelectorAll('.filter'));
+    let activeFilter = 'todos';
+
+    function normalizeText(text) {
+      return String(text || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+    }
+
+    function applyFilters() {
+      const term = normalizeText(searchInput.value.trim());
+      cards.forEach(card => {
+        const area = card.dataset.area || '';
+        const text = normalizeText((card.dataset.search || '') + ' ' + card.textContent);
+        const matchArea = activeFilter === 'todos' || area === activeFilter;
+        const matchTerm = !term || text.includes(term);
+        card.classList.toggle('hidden', !(matchArea && matchTerm));
+      });
+    }
+
+    searchInput.addEventListener('input', applyFilters);
+    filters.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filters.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeFilter = btn.dataset.filter;
+        applyFilters();
+        document.getElementById('catalogo').scrollIntoView({behavior:'smooth', block:'start'});
+      });
+    });
+
+    document.getElementById('ano').textContent = new Date().getFullYear();
+  </script>
+  <script src="radar-copa-parceiro.js"></script>
+</body>
+</html>
